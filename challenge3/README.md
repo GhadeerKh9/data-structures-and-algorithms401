@@ -1,6 +1,6 @@
 # Binary Search of Sorted Array
 
-## In this challenge we created a function that takes arguments, an array of integers and an integer, and returns the index of the entered integer if it exists within the array and -1 if doesn’t exist.
+## In this challenge we created a function that takes arguments, an array of integers and an integer, and returns the index of the entered integer if it exists within the array and -1 if doesn’t exist
 
 ## Whiteboard Process
 
