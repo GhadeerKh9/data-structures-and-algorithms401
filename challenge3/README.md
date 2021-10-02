@@ -4,7 +4,7 @@
 
 ## Whiteboard Process
 
-![Image](../array-binary-search)
+![Image](/array-binary-search)
 
 ## Approach & Efficiency
 
