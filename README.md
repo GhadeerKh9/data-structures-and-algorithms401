@@ -15,6 +15,3 @@
 | challenge3 | [Readme file](https://github.com/GhadeerKh9/data-structures-and-algorithms401/blob/main/challenge3/README.md) |
 |            |                                                                                                               |
 |            |                                                                                                               |
-
-
-|            |                                                                                                               |
