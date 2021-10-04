@@ -3,8 +3,29 @@
  */
 package challenge6;
 
+
+import challenge6.structure.LinkedList;
+
 public class App {
     public static void main(String[] args) {
         System.out.println("TEST MAIN");
+
+
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("G");
+        linkedList.append("H");
+        linkedList.append("A");
+
+
+
+//
+//       linkedList.insertBefore("A", "DDDDDDDDDDDD");
+
+        linkedList.insertAfter("H", "mmmmm");
+                linkedList.print();
+
+
+
+
     }
 }
