@@ -3,12 +3,28 @@
  */
 package challenge7;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import challenge7.structure.LinkedList;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println("TEST MAIN");
+
+
+        LinkedList linkedList = new LinkedList();
+        linkedList.append("G");
+        linkedList.append("H");
+        linkedList.append("A");
+
+
+
+//
+//       linkedList.insertBefore("A", "DDDDDDDDDDDD");
+
+        linkedList.insertAfter("H", "mmmmm");
+        linkedList.print();
+
+
+
+
     }
 }

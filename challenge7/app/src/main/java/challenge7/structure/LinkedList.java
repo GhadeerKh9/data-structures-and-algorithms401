@@ -1,11 +1,11 @@
-package challenge6.structure;
+package challenge7.structure;
 
-import challenge6.data.LinkedListNode;
+
+import challenge7.data.LinkedListNode;
 
 public class LinkedList {
 
     public LinkedListNode head;
-
 
     public LinkedList() {
 
@@ -78,30 +78,57 @@ public class LinkedList {
 
     }
 
+    public LinkedList zipLists(LinkedList list1, LinkedList list2){
+        if(list1.head == null && list2.head == null){
+            System.out.println("EMPTY");
+            return null;
+        }
+        else if (list1.head == null) {
+            return list2;
+        } else if (list2.head == null) {
+            return list1;
+        } else {
+            LinkedListNode current1 = list1.head;
+            LinkedListNode current2 = list2.head;
+            LinkedListNode currentA, currentB;
+            while (current1.getNext() != null && current2 != null) {
 
-    public static LinkedList zippedList(LinkedList list1, LinkedList list2){
-
-        LinkedListNode current1 = list1.head;
-        LinkedListNode current2 = list2.head;
-
-
-        LinkedListNode currentA;
-        LinkedListNode currentB;
-
-        while(current1.getNext() !=null && current2.getNext() != null){
-
-            currentA = current1.getNext();
-            currentB = current2.getNext();
-
-            current1.setNext(current2);
-            current2.setNext(currentA);
+                currentA=current1.getNext();
+                currentB= current2.getNext();
+                current1.setNext(current2);
+                current2.setNext(currentA);
+                current1=currentA;
 
 
+                current2=currentB;
+
+                if(current1.getNext() == null){
+                    current1.setNext(current2);
+                    break;
+                }
+            }
         }
 
         return list1;
-
     }
+
+//    public String kthFromEnd(int index) {
+//
+//        LinkedListNode current = head;
+//        if (head == null) {
+//            System.out.println("The list is empty");
+//        }
+//        if (index > getSize() - 1 || index < 0) {
+//            return "Exception";
+//        }
+//        int i = 0;
+//        while (i < (getSize() - index - 1)) {
+//            current = current.getNext();
+//            i++;
+//        }
+//        return current.getData();
+//    }
+
 
     @Override
     public String toString() {
@@ -110,4 +137,3 @@ public class LinkedList {
                 '}';
     }
 }
-
