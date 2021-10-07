@@ -6,6 +6,7 @@ import challenge7.data.LinkedListNode;
 public class LinkedList {
 
     public LinkedListNode head;
+    private int size;
 
     public LinkedList() {
 
@@ -16,6 +17,7 @@ public class LinkedList {
         if (head == null) {
             LinkedListNode node = new LinkedListNode(data);
             head = node;
+            size++;
         } else {
             LinkedListNode current;
             current = head;
@@ -24,9 +26,27 @@ public class LinkedList {
             }
             LinkedListNode node = new LinkedListNode(data);
             current.setNext(node);
+            size++;
         }
 
     }
+
+    public boolean include(String data) {
+        if (head == null) {
+            LinkedListNode node = new LinkedListNode(data);
+            head = node;
+        } else {
+            LinkedListNode current = head;
+            while (current != null) {
+                if (current.getData() == data) {
+                    return true;
+                }
+                current = current.getNext();
+            }
+        }
+        return false;
+    }
+
 
 
     public void print() {
@@ -44,6 +64,9 @@ public class LinkedList {
         }
 
     }
+
+
+
 
     public void insertBefore(String data, String before) {
         LinkedListNode node = new LinkedListNode(before);
@@ -76,6 +99,28 @@ public class LinkedList {
             current.next = node;
         }
 
+    }
+
+
+    public String valueFromEnd(int number) {
+        if (head == null) {
+            return "List is Empty";
+        } else {
+
+            int index = (size - number) - 1;
+
+            LinkedListNode current;
+            current = head;
+
+            int counter = 0;
+
+            while (counter != index) {
+                current = current.getNext();
+                counter++;
+            }
+
+            return current.getData();
+        }
     }
 
     public LinkedList zipLists(LinkedList list1, LinkedList list2){

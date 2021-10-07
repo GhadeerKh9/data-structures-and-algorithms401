@@ -16,12 +16,18 @@ public class App {
         linkedList.append("A");
 
 
+//        linkedList.include("G")
 
-//
+//        System.out.println(linkedList.include("G"));
+
+
 //       linkedList.insertBefore("A", "DDDDDDDDDDDD");
 
-        linkedList.insertAfter("H", "mmmmm");
-        linkedList.print();
+//        linkedList.insertAfter("H", "mmmmm");
+
+
+
+        System.out.println(linkedList.include(1));
 
 
 
