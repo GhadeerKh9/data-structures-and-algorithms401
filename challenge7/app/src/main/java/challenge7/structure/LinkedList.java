@@ -2,6 +2,7 @@ package challenge7.structure;
 
 
 import challenge7.data.LinkedListNode;
+import org.w3c.dom.Node;
 
 public class LinkedList {
 
@@ -12,24 +13,21 @@ public class LinkedList {
 
     }
 
-    public void append(String data) {
 
+
+    public void insert(String data) {
         if (head == null) {
             LinkedListNode node = new LinkedListNode(data);
             head = node;
-            size++;
         } else {
-            LinkedListNode current;
-            current = head;
-            while (current.getNext() != null) {
-                current = current.getNext();
-            }
-            LinkedListNode node = new LinkedListNode(data);
-            current.setNext(node);
-            size++;
+            LinkedListNode newNode = new LinkedListNode(data);
+            newNode.setNext(head);
+            head = newNode;
         }
-
+        size++;
     }
+
+
 
     public boolean include(String data) {
         if (head == null) {
@@ -66,38 +64,58 @@ public class LinkedList {
     }
 
 
+    public void append(String data) {
 
-
-    public void insertBefore(String data, String before) {
-        LinkedListNode node = new LinkedListNode(before);
         if (head == null) {
+            LinkedListNode node = new LinkedListNode(data);
             head = node;
-        } else if (data == head.getData()) {
-            node.next = head;
-            head = node;
+            size++;
         } else {
-            LinkedListNode current = head;
-            while (current.next.getData() != data) {
-                current = current.next;
+            LinkedListNode current;
+            current = head;
+            while (current.getNext() != null) {
+                current = current.getNext();
             }
-            node.next = current.next;
-            current.next = node;
+            LinkedListNode node = new LinkedListNode(data);
+            current.setNext(node);
+            size++;
         }
 
     }
 
-    public void insertAfter(String data , String after){
-        LinkedListNode node = new LinkedListNode(after);
+    public void insertBefore(String check, String data) {
+        LinkedListNode node = new LinkedListNode(data);
+        if (head == null) {
+            head = node;
+        } else if (check == head.getData()) {
+            node.next = head;
+            head = node;
+        } else {
+            LinkedListNode current = head;
+            while (current.next.getData() != check) {
+                current = current.next;
+
+            }
+            node.next = current.next;
+            current.next = node;
+        }
+        size++;
+
+    }
+
+    public void insertAfter(String check , String data){
+        LinkedListNode node = new LinkedListNode(data);
         if (head == null) {
             head = node;
         }else {
             LinkedListNode current = head;
-            while (current.getData() != data) {
+            while (current.getData() != check) {
                 current = current.next;
             }
             node.next = current.next;
             current.next = node;
         }
+        size++;
 
     }
 
@@ -107,7 +125,7 @@ public class LinkedList {
             return "List is Empty";
         } else {
 
-            int index = (size - number) - 1;
+            int index = (size - number) ;
 
             LinkedListNode current;
             current = head;
@@ -123,29 +141,27 @@ public class LinkedList {
         }
     }
 
-    public LinkedList zipLists(LinkedList list1, LinkedList list2){
-        if(list1.head == null && list2.head == null){
-            System.out.println("EMPTY");
-            return null;
-        }
-        else if (list1.head == null) {
-            return list2;
-        } else if (list2.head == null) {
-            return list1;
+
+
+
+    public LinkedList zippedList(LinkedList list1, LinkedList list2) {
+        if(list1.head == null && list2.head == null) {
+            System.out.println("Lists Are Empty");
         } else {
             LinkedListNode current1 = list1.head;
             LinkedListNode current2 = list2.head;
             LinkedListNode currentA, currentB;
+
             while (current1.getNext() != null && current2 != null) {
 
-                currentA=current1.getNext();
-                currentB= current2.getNext();
+                currentA = current1.getNext();
+                currentB = current2.getNext();
                 current1.setNext(current2);
                 current2.setNext(currentA);
-                current1=currentA;
+                current1 = currentA;
+                current2 = currentB;
 
-
-                current2=currentB;
+                size++;
 
                 if(current1.getNext() == null){
                     current1.setNext(current2);
@@ -157,28 +173,42 @@ public class LinkedList {
         return list1;
     }
 
-//    public String kthFromEnd(int index) {
-//
-//        LinkedListNode current = head;
-//        if (head == null) {
-//            System.out.println("The list is empty");
-//        }
-//        if (index > getSize() - 1 || index < 0) {
-//            return "Exception";
-//        }
-//        int i = 0;
-//        while (i < (getSize() - index - 1)) {
-//            current = current.getNext();
-//            i++;
-//        }
-//        return current.getData();
-//    }
 
+
+
+    public static LinkedList reverseList(LinkedList list){
+
+
+        LinkedListNode head1 = list.head;
+        LinkedListNode head2 = list.head;
+        LinkedListNode current = head1.getNext();
+        LinkedListNode temp;
+
+        while(current != null){
+
+            temp = current;
+
+            current = current.getNext();
+
+            temp.setNext(head2);
+
+            head1.setNext(null);
+
+            head2 = temp;
+        }
+
+        list.head = head2;
+        return list;
+
+
+    }
 
     @Override
     public String toString() {
         return "LinkedList{" +
                 "head=" + head +
+                ", size=" + size +
                 '}';
     }
 }
+

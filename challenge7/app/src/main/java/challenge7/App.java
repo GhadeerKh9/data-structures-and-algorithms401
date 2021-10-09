@@ -14,20 +14,54 @@ public class App {
         linkedList.append("G");
         linkedList.append("H");
         linkedList.append("A");
+        linkedList.append("New");
 
 
-//        linkedList.include("G")
-
-//        System.out.println(linkedList.include("G"));
-
-
-//       linkedList.insertBefore("A", "DDDDDDDDDDDD");
-
-//        linkedList.insertAfter("H", "mmmmm");
+        LinkedList linkedList2 = new LinkedList();
+        linkedList2.append("2");
+        linkedList2.append("H2");
+        linkedList2.append("A2");
+        linkedList2.append("2");
 
 
+//        linkedList.print();
+//
+        linkedList.insert("Inser");
+//        linkedList.print();
+//
+////        linkedList.include("G")
+//
+////        System.out.println(linkedList.include("G"));
+//
+//
+       linkedList.insertBefore("A", "DDDDDDDDDDDD");
+//       linkedList.print();
+//
+        linkedList.insertAfter("H", "mmmmm");
 
-        System.out.println(linkedList.include(1));
+
+        linkedList.print();
+
+
+        System.out.println(linkedList.valueFromEnd(4));
+//        linkedList.print();
+
+
+
+        linkedList.print();
+        linkedList2.print();
+
+        System.out.println(linkedList.zippedList(linkedList, linkedList2));
+
+
+
+
+
+
+
+
+
+
 
 
 
