@@ -6,6 +6,7 @@ public class LinkedList {
 
     public LinkedListNode head;
 
+
     public LinkedList() {
 
     }
@@ -75,6 +76,38 @@ public class LinkedList {
             current.next = node;
         }
 
+    }
+
+
+    public static LinkedList zippedList(LinkedList list1, LinkedList list2){
+
+        LinkedListNode current1 = list1.head;
+        LinkedListNode current2 = list2.head;
+
+
+        LinkedListNode currentA;
+        LinkedListNode currentB;
+
+        while(current1.getNext() !=null && current2.getNext() != null){
+
+            currentA = current1.getNext();
+            currentB = current2.getNext();
+
+            current1.setNext(current2);
+            current2.setNext(currentA);
+
+
+        }
+
+        return list1;
+
+    }
+
+    @Override
+    public String toString() {
+        return "LinkedList{" +
+                "head=" + head +
+                '}';
     }
 }
 

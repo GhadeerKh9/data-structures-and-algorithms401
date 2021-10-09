@@ -17,12 +17,24 @@ public class App {
         linkedList.append("A");
 
 
+        LinkedList linkedList2 = new LinkedList();
+        linkedList2.append("LLL");
+        linkedList2.append("HLLLL");
+        linkedList2.append("Mohammad");
+
+
+
+//        System.out.println( LinkedList.zippedList(linkedList,linkedList2));
+
+
+
+
 
 //
 //       linkedList.insertBefore("A", "DDDDDDDDDDDD");
 
-        linkedList.insertAfter("H", "mmmmm");
-                linkedList.print();
+//        linkedList.insertAfter("H", "mmmmm");
+//                linkedList.print();
 
 
 
