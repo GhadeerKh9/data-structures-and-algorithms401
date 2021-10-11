@@ -141,6 +141,6 @@ public class LibraryTest {
         assertEquals(" { 2 }  --->  { 5 }  --->  { 1 }  --->  { 4 }  --->  { 3 }  --->  NULL ", (testlist.zippedList(testlist, testlist1)).toString());
 
     }
-    
+
 
 }
