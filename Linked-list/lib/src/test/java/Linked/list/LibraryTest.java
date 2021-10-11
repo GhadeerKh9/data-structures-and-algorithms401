@@ -93,7 +93,7 @@ public class LibraryTest {
         assertEquals(" { 3 }  --->  { 2 }  --->  { 2 }  --->  { 1 }  --->  NULL ", Test.toString());
     }
 
-    @Test  public void addBeforFirstNode() {
+    @Test  public void insertBefore() {
         LinkedList Test = new LinkedList();
         Test.insert("1");
         Test.insert("2");
@@ -102,7 +102,7 @@ public class LibraryTest {
         assertEquals(" { 40 }  --->  { 3 }  --->  { 2 }  --->  { 1 }  --->  NULL ", Test.toString());
     }
 //
-    @Test public void addAfter(){
+    @Test public void After(){
 
         LinkedList Test = new LinkedList();
         Test.insert("20");
@@ -112,20 +112,11 @@ public class LibraryTest {
         assertEquals(" { 100 }  --->  { 50 }  --->  { 30 }  --->  { 20 }  --->  NULL ", Test.toString());
     }
 
-    @Test public void addAfterlast(){
 
-        LinkedList Test = new LinkedList();
-        Test.insert("20");
-        Test.insert("50");
-        Test.insert("100");
-        Test.insertAfter("20","70");
-
-        assertEquals(" { 100 }  --->  { 50 }  --->  { 20 }  --->  { 70 }  --->  NULL ", Test.toString());
-    }
 
 
     @Test
-    public void happyPath() {
+    public void valueFromEnd() {
         LinkedList testList = new LinkedList();
 
         testList.insert("H");

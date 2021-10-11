@@ -44,22 +44,7 @@ public class LinkedList {
     }
 
 
-//
-//    public void print() {
-//        if (head == null) {
-//            System.out.println("LIST IS EMPTY");
-//        } else {
-//            LinkedListNode current;
-//            current = head;
-//            System.out.print("head------------->");
-//            while (current != null) {
-//                System.out.print(current.getData() + "-->");
-//                current = current.getNext();
-//            }
-//            System.out.println("Null");
-//        }
-//
-//    }
+
 
 
     public void append(String data) {
