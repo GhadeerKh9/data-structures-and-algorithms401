@@ -11,10 +11,15 @@ public class Library {
 
 
         LinkedList instance1 =  new LinkedList();
-        instance1.insert("d");
-        instance1.print();
+//        instance1.insert("d");
+//        instance1.print();
 
-        
+
+        instance1.append("2");
+        instance1.append("3");
+        instance1.append("5");
+        System.out.println(instance1);
+
 
     }
 }

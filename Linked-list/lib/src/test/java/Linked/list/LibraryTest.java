@@ -3,11 +3,155 @@
  */
 package Linked.list;
 
+import Linked.list.structure.LinkedList;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LibraryTest {
+public class LibraryTest {
     @Test void insertTesting(){
-        System.out.println("Hello");
+       assertTrue(true);
     }
+
+    @Test
+    void lastTest(){
+        assertEquals(1,1);
+    }
+
+    @Test
+    void instantiateLinkedList() {
+        LinkedList testing = new LinkedList();
+        assertNull(testing.head);
+
+
+    }
+
+    @Test
+    void insertion() {
+        LinkedList testing = new LinkedList();
+        testing.insert("1");
+        testing.insert("2");
+        testing.insert("3");
+        assertEquals(" { 3 }  --->  { 2 }  --->  { 1 }  --->  NULL ", testing.toString());
+    }
+
+
+    @Test
+    void testHead() {
+        LinkedList testing = new LinkedList();
+        testing.insert("1");
+        testing.insert("2");
+        testing.insert("3");
+        assertEquals("100", testing.head.getData());
+    }
+
+
+
+    @Test
+    void inclueTesting() {
+        LinkedList testing = new LinkedList();
+        testing.insert("1");
+        testing.insert("2");
+        testing.insert("3");
+        assertTrue(testing.include("2"));
+    }
+
+
+
+
+    @Test  public void checkEmptiness() {
+        LinkedList testList = new LinkedList();
+    }
+
+    @Test  public void appendTest() {
+        LinkedList Test = new LinkedList();
+        Test.append("2");
+        Test.append("3");
+        Test.append("5");
+
+        assertEquals(" { 2 }  --->  { 3 }  --->  { 5 }  --->  NULL ", Test.toString());
+
+    }
+//
+    @Test  public void addToEnd() {
+        LinkedList Test = new LinkedList();
+        Test.insert("1");
+        Test.insert("2");
+        Test.insert("3");
+        Test.append("2");
+        Test.append("3");
+        Test.append("5");
+        assertEquals(" { 3 }  --->  { 2 }  --->  { 1 }  --->  { 2 }  --->  { 3 }  --->  { 5 }  --->  NULL ", Test.toString());
+    }
+
+    @Test  public void addBefore() {
+        LinkedList Test = new LinkedList();
+        Test.insert("1");
+        Test.insert("2");
+        Test.insert("3");
+        Test.insertBefore("2","2");
+
+        assertEquals(" { 3 }  --->  { 2 }  --->  { 2 }  --->  { 1 }  --->  NULL ", Test.toString());
+    }
+
+    @Test  public void addBeforFirstNode() {
+        LinkedList Test = new LinkedList();
+        Test.insert("1");
+        Test.insert("2");
+        Test.insert("3");
+        Test.insertBefore("3","40");
+        assertEquals(" { 40 }  --->  { 3 }  --->  { 2 }  --->  { 1 }  --->  NULL ", Test.toString());
+    }
+//
+    @Test public void addAfter(){
+
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
+        Test.insertAfter("50","30");
+        assertEquals(" { 100 }  --->  { 50 }  --->  { 30 }  --->  { 20 }  --->  NULL ", Test.toString());
+    }
+
+    @Test public void addAfterlast(){
+
+        LinkedList Test = new LinkedList();
+        Test.insert("20");
+        Test.insert("50");
+        Test.insert("100");
+        Test.insertAfter("20","70");
+
+        assertEquals(" { 100 }  --->  { 50 }  --->  { 20 }  --->  { 70 }  --->  NULL ", Test.toString());
+    }
+
+
+    @Test
+    public void happyPath() {
+        LinkedList testList = new LinkedList();
+
+        testList.insert("H");
+        testList.insert("a");
+        testList.insert("p");
+
+
+        assertEquals("H", testList.valueFromEnd(1));
+    }
+
+    @Test
+    public void zipList(){
+
+        LinkedList testlist = new LinkedList();
+        LinkedList testlist1 = new LinkedList();
+        testlist.insert("1");
+        testlist.insert("2");
+        testlist1.insert("3");
+        testlist1.insert("4");
+        testlist1.insert("5");
+
+        assertEquals(" { 2 }  --->  { 5 }  --->  { 1 }  --->  { 4 }  --->  { 3 }  --->  NULL ", (testlist.zippedList(testlist, testlist1)).toString());
+
+    }
+
+
+
+
 }
