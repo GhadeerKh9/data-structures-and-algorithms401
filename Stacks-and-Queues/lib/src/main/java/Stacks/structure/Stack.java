@@ -2,6 +2,7 @@ package Stacks.structure;
 
 import Stacks.data.Node;
 
+//import java.util.function.Supplier;
 
 
 public class Stack {
@@ -42,9 +43,7 @@ public class Stack {
         }
     }
 
-    public boolean isEmpty() {
-        return top == null;
-    }
+
 
     @Override
     public String toString() {
@@ -54,4 +53,8 @@ public class Stack {
     }
 
 
+
+    public boolean isEmpty() {
+        return top == null;
+    }
 }

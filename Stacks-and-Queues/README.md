@@ -1,0 +1,25 @@
+# Stacks and Queues
+
+Stack are a placewhere you can save nodes above each other and pushing to the stack from the top only. Queues you can push from the rear and delete from thr front.
+
+## Challenge
+
+This challenge was to create push, pop, peek methods for the stack and enqueue, dequeue and peek for queue.
+
+## Approach & Efficiency
+
+I used the methodology of the stacks and queues in creating corresponding methods and basically getnext and setnext methods.
+
+## Stack
+
+Stack
+
+Push: pushed to the stack
+pop: removes the top node
+peek: get the top node
+
+## Queue
+
+Enqueue: adds a node from rear
+Dequeue: Removes node from front
+Peek: get the front node.

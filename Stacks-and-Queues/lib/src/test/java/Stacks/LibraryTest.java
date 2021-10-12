@@ -3,6 +3,7 @@
  */
 package Stacks;
 
+import Stacks.structure.Queues;
 import Stacks.structure.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +15,112 @@ class LibraryTest {
 
         nodeOne.push("Ghadeer");
 
-        assertEquals("Stack{top=Ghadeer'}",nodeOne.toString());
+        assertEquals("Stack{top=Node{data='Ghadeer', next=null}}",nodeOne.toString());
 
     }
+
+
+    @Test
+    public void popTest() {
+        Stack nodeOne = new Stack();
+
+        nodeOne.push("Ghadeer");
+        nodeOne.push("Gha");
+        nodeOne.push("G");
+        nodeOne.pop();
+
+        assertEquals("Stack{top=Node{data='Gha', next=Node{data='Ghadeer', next=null}}}",nodeOne.toString());
+
+    }
+//
+    @Test
+    public void peekTest() {
+        Stack nodeOne = new Stack();
+
+        nodeOne.push("Ghadeer");
+        nodeOne.push("Gha");
+        nodeOne.push("G");
+        nodeOne.peek();
+
+        assertEquals("G",nodeOne.peek());
+
+    }
+    @Test
+    public void checkIsEmpty() {
+        Stack nodeOne = new Stack();
+
+        nodeOne.push("Ghadeer");
+        nodeOne.push("Gha");
+        nodeOne.push("G");
+        nodeOne.pop();
+        nodeOne.pop();
+        nodeOne.pop();
+
+//        assertTrue(true, nodeOne.isEmpty());
+
+    }
+//
+//
+//
+    @Test
+    public void enqueueTest() {
+        Queues nodeTwo = new Queues();
+
+        nodeTwo.enqueue("Ghadeer");
+        nodeTwo.enqueue("Gha");
+        nodeTwo.enqueue("G");
+
+        assertEquals("Queues{front=Node{data='Ghadeer', next=Node{data='Gha', next=Node{data='G', next=null}}}, rear=Node{data='G', next=null}}",nodeTwo.toString());
+
+
+    }
+//
+//
+    @Test
+    public void dequeueTest() {
+        Queues nodeTwo = new Queues();
+
+        nodeTwo.enqueue("Ghadeer");
+        nodeTwo.enqueue("Gha");
+        nodeTwo.enqueue("G");
+        nodeTwo.dequeue();
+
+        assertEquals("Gha",nodeTwo.dequeue());
+
+
+    }
+    @Test
+    public void peekQueueTest() {
+        Queues nodeTwo = new Queues();
+
+        nodeTwo.enqueue("Ghadeer");
+        nodeTwo.enqueue("Gha");
+        nodeTwo.enqueue("G");
+        nodeTwo.peek();
+
+        assertEquals("Ghadeer",nodeTwo.peek());
+
+
+    }
+    @Test
+    public void queueIsEmptyTest() {
+        Queues nodeTwo = new Queues();
+
+        nodeTwo.enqueue("Ghadeer");
+        nodeTwo.enqueue("Gha");
+        nodeTwo.enqueue("G");
+        nodeTwo.dequeue();
+        nodeTwo.dequeue();
+        nodeTwo.dequeue();
+
+       assertTrue(nodeTwo.isEmpty());
+
+
+    }
+
+
+
+
+
+
 }
