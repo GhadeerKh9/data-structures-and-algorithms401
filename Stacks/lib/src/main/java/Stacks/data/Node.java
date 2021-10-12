@@ -2,9 +2,8 @@ package Stacks.data;
 
 public class Node {
 
-    private String data;
-    private Node next;
-
+    String data;
+    Node next;
 
     public Node(String data) {
         this.data = data;
@@ -28,8 +27,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node{" +
-                "data='" + data + '\'' +
-                '}';
+        return data + '\'';
     }
 }

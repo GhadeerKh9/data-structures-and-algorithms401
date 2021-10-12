@@ -3,8 +3,14 @@
  */
 package Stacks;
 
+import Stacks.structure.Stack;
+
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    public static void main(String[] args) {
+        Stack nodeOne = new Stack();
+
+        nodeOne.push("Ghadeer");
+
+        System.out.println(nodeOne);
     }
 }

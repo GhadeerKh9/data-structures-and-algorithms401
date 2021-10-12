@@ -3,12 +3,20 @@
  */
 package Stacks;
 
+import Stacks.structure.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+    @Test
+    public void pushTest() {
+        Stack nodeOne = new Stack();
+
+        nodeOne.push("Ghadeer");
+
+        assertEquals("Stack{top=Ghadeer'}",nodeOne.toString());
+
     }
+
 }
