@@ -6,7 +6,6 @@ package Stacks;
 import Stacks.structure.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-
 class LibraryTest {
 
     @Test
@@ -18,5 +17,4 @@ class LibraryTest {
         assertEquals("Stack{top=Ghadeer'}",nodeOne.toString());
 
     }
-
 }
