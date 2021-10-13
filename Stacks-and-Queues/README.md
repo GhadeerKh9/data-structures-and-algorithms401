@@ -26,7 +26,7 @@ Peek: get the front node.
 
 # Challenge 13. Multi-bracket Validation
 
-![Image](bracket-Validation.png)
+
 
 # Challenge Summary
 
