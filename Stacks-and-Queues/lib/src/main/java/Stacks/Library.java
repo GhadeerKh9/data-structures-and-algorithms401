@@ -4,6 +4,7 @@
 package Stacks;
 
 import Stacks.structure.Brackets;
+import Stacks.structure.PseudoQueue;
 import Stacks.structure.Queues;
 import Stacks.structure.Stack;
 
@@ -35,7 +36,7 @@ public class Library {
         nodeTwo.peek();
 
 
-        System.out.println(nodeTwo.peek());
+//        System.out.println(nodeTwo.peek());
 
 //        nodeOne.pop();
 //        System.out.println(nodeOne);
@@ -44,11 +45,30 @@ public class Library {
 
 
 
+//
+//        Brackets stack1 = new Brackets();
+//
+//
+//        System.out.println(stack1.bracketValidation("{[]]]}"));
 
-        Brackets stack1 = new Brackets();
 
 
-        System.out.println(stack1.bracketValidation("{[]]]}"));
+        PseudoQueue queue = new PseudoQueue();
+
+//        queue.enqueue("Ghadeer");
+//        queue.enqueue("Khasawneh");
+
+
+        queue.dequeue();
+
+
+
+//
+        System.out.println(queue);
+//
+//        System.out.println(queue.dequeue());
+
+
 
     }
 

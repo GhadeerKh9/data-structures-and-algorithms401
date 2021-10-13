@@ -4,6 +4,7 @@
 package Stacks;
 
 import Stacks.structure.Brackets;
+import Stacks.structure.PseudoQueue;
 import Stacks.structure.Queues;
 import Stacks.structure.Stack;
 import org.junit.jupiter.api.Test;
@@ -57,7 +58,7 @@ class LibraryTest {
         nodeOne.pop();
         nodeOne.pop();
 
-//        assertTrue(true, nodeOne.isEmpty());
+
 
     }
 //
@@ -129,6 +130,33 @@ class LibraryTest {
         assertFalse(stack1.bracketValidation("[{)}]"));
         assertFalse(stack1.bracketValidation("(]("));
 
+
+    }
+
+    @Test
+    public void enqueueTestPsudo() {
+
+
+        PseudoQueue queue = new PseudoQueue();
+
+        queue.enqueue("Ghadeer");
+        queue.enqueue("Khasawneh");
+
+        assertEquals("stack1========>Stack{top=Node{data='Khasawneh', next=Node{data='Ghadeer', next=null}}}", queue.toString());
+    }
+
+     @Test
+     public void dequeueTestPseudo(){
+
+         PseudoQueue queue = new PseudoQueue();
+
+         queue.enqueue("Ghadeer");
+         queue.enqueue("Khasawneh");
+         queue.dequeue();
+
+
+
+        assertEquals("stack1========>Stack{top=Node{data='Khasawneh', next=Node{data='Ghadeer', next=null}}}",queue.toString());
 
     }
 
