@@ -24,9 +24,24 @@ Enqueue: adds a node from rear
 Dequeue: Removes node from front
 Peek: get the front node.
 
+# Challenge 11. Implement a Queue using two Stacks.
+
+# Challenge Summary
+
+## Whiteboard Process
+
+![image](stackToEnqueue.png)
+
+## Approach & Efficiency
+
+I created two methods and used for and while loops and stacks methods such as push and pop.
+
+## Solution
+
+input ==> stack1 ==> 1==>2==>3
+stack.enqueue(value)==>>1==>2>>>value
+
 # Challenge 13. Multi-bracket Validation
-
-
 
 # Challenge Summary
 
