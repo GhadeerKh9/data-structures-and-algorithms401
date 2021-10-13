@@ -61,4 +61,27 @@ public class Stack {
     public Node getTop() {
         return top;
     }
-}
+
+
+    public Integer getMaximum() {
+
+        if(top == null){
+
+            return 0;
+
+        }
+        int number = 0;
+         while(top != null){
+             if(Integer.parseInt(top.getData()) > number){
+
+              number = Integer.parseInt(top.getData());
+
+             }
+             pop();
+         }
+
+        return number;
+
+         }
+
+     }
