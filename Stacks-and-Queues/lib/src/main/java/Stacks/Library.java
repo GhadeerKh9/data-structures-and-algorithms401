@@ -14,12 +14,13 @@ public class Library {
 
 
 
+
+
+
         nodeOne.push("Ghadeer");
         nodeOne.push("Gha");
         nodeOne.push("G");
 
-
-//        System.out.println(nodeOne);
 
 //        nodeOne.pop();
 //        System.out.println(nodeOne);
@@ -59,14 +60,26 @@ public class Library {
 //        queue.enqueue("Khasawneh");
 
 
-        queue.dequeue();
+//        queue.dequeue();
 
 
 
 //
-        System.out.println(queue);
+//        System.out.println(queue);
 //
 //        System.out.println(queue.dequeue());
+
+
+        Stack nodeThree = new Stack();
+
+        nodeThree.push("10");
+        nodeThree.push("15");
+        nodeThree.push("20");
+        nodeThree.push("18");
+//        nodeThree.getMaximum();
+
+
+        System.out.println(nodeThree.getMaximum());
 
 
 
