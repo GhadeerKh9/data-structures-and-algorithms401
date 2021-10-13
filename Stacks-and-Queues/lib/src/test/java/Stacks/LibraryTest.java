@@ -3,6 +3,7 @@
  */
 package Stacks;
 
+import Stacks.structure.Brackets;
 import Stacks.structure.Queues;
 import Stacks.structure.Stack;
 import org.junit.jupiter.api.Test;
@@ -118,9 +119,18 @@ class LibraryTest {
 
     }
 
+    @Test
+    public void validateBracketsTest(){
+
+        Brackets stack1 = new Brackets();
 
 
+        assertTrue(stack1.bracketValidation("[]{}()"));
+        assertFalse(stack1.bracketValidation("[{)}]"));
+        assertFalse(stack1.bracketValidation("(]("));
 
+
+    }
 
 
 }

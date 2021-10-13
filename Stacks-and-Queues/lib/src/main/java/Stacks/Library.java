@@ -3,12 +3,15 @@
  */
 package Stacks;
 
+import Stacks.structure.Brackets;
 import Stacks.structure.Queues;
 import Stacks.structure.Stack;
 
 public class Library {
     public static void main(String[] args) {
         Stack nodeOne = new Stack();
+
+
 
         nodeOne.push("Ghadeer");
         nodeOne.push("Gha");
@@ -23,8 +26,6 @@ public class Library {
 //        System.out.println(nodeOne.peek());
 
 
-
-
         Queues nodeTwo = new Queues();
 
         nodeTwo.enqueue("Ghadeer");
@@ -32,7 +33,6 @@ public class Library {
         nodeTwo.enqueue("G");
 
         nodeTwo.peek();
-
 
 
         System.out.println(nodeTwo.peek());
@@ -44,5 +44,15 @@ public class Library {
 
 
 
+
+        Brackets stack1 = new Brackets();
+
+
+        System.out.println(stack1.bracketValidation("{[]]]}"));
+
     }
+
+
+
+
 }
