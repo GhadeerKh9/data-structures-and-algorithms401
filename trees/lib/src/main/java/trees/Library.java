@@ -3,9 +3,31 @@
  */
 package trees;
 
+import trees.node.BinaryNode;
+import trees.trees.BinarySearchTree;
+
 public class Library {
     public static void main(String[] args) {
         System.out.println("hi");
+
+
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+        tree.add(70);
+        tree.add(80);
+        tree.add(20);
+        tree.add(90);
+        tree.add(10);
+
+//
+//        System.out.println(tree);
+
+        System.out.println(tree.contains(30));
+
+
+
+
+
 
     }
 }
