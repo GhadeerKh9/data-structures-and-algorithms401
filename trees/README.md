@@ -1,4 +1,4 @@
-# Challenge Summary
+# Challenge 16
 
 This challenge was to to find the maximum value in a binary tree.
 
