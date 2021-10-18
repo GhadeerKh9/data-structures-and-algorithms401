@@ -9,21 +9,10 @@ import java.util.List;
 public class BinaryTreeClass<T extends Comparable<T>>{
 
 
-    private BinaryNode<T> root;
+    public BinaryNode<T> root;
 
 
-    public void add(T data){
 
-        if(isEmpty()) {
-            root = new BinaryNode<>(data);
-
-        }
-
-        else{
-                addHelper(data, root);
-        }
-
-    }
 
     public void addHelper(T data, BinaryNode<T> root){
 
@@ -50,26 +39,6 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 
 
 
-    public boolean contains(T data){
-
-        BinaryNode<T> newNode = root;
-
-        while (newNode != null) {
-            if(data.compareTo(newNode.getData()) < 0){
-                newNode = newNode.getLeftNode();
-
-            }else if (data.compareTo(newNode.getData()) > 0){
-                newNode = newNode.getRightNode();
-            }else {
-
-                return true;
-            }
-
-        }
-
-        return false;
-    }
-
 
 
     public void inorderTraversal(){
@@ -85,8 +54,10 @@ public class BinaryTreeClass<T extends Comparable<T>>{
         if(root.getLeftNode() != null){
             traverseInorder(root.getLeftNode());
 
-            System.out.println(root.getData() + "--->");
+
         }
+
+        System.out.println(root.getData() + "--->");
 
         if(root.getRightNode() != null){
             traverseInorder(root.getRightNode());

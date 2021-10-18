@@ -4,11 +4,108 @@
 package trees;
 
 import org.junit.jupiter.api.Test;
+import trees.trees.BinarySearchTree;
+import trees.trees.BinaryTreeClass;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+
+    @Test
+    public void emptyTree() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+
+        assertEquals("BinaryTreeClass{root=null}", tree.toString());
+//
+//
+//
     }
-}
+    @Test
+    public void addFirstNode() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+
+
+        assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=null}}", tree.toString());
+    }
+
+    @Test
+    public void addTest() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+        tree.add(70);
+        tree.add(80);
+
+        tree.add(50);
+
+        tree.add(53);
+
+        assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=BinaryNode{data=70, leftNode=BinaryNode{data=50, leftNode=null, rightNode=BinaryNode{data=53, leftNode=null, rightNode=null}}, rightNode=BinaryNode{data=80, leftNode=null, rightNode=null}}}}", tree.toString());
+    }
+
+//
+//
+//
+    @Test
+    public void containsTest(){
+
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+        tree.add(70);
+        tree.add(80);
+
+        tree.add(50);
+
+        tree.add(53);
+
+        assertTrue(tree.contains(30));
+        assertFalse(tree.contains(7));
+    }
+//
+    @Test
+    public void inOrderOrderTest() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+        tree.add(70);
+        tree.add(80);
+
+        tree.add(50);
+
+        tree.add(53);
+        assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=BinaryNode{data=70, leftNode=BinaryNode{data=50, leftNode=null, rightNode=BinaryNode{data=53, leftNode=null, rightNode=null}}, rightNode=BinaryNode{data=80, leftNode=null, rightNode=null}}}}", tree.toString());
+
+    }
+//
+
+    @Test
+    public void preOrderTest() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+        tree.add(70);
+        tree.add(80);
+
+        tree.add(50);
+
+        tree.add(53);
+        assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=BinaryNode{data=70, leftNode=BinaryNode{data=50, leftNode=null, rightNode=BinaryNode{data=53, leftNode=null, rightNode=null}}, rightNode=BinaryNode{data=80, leftNode=null, rightNode=null}}}}", tree.toString());
+
+    }
+
+    @Test
+    public void postOrderTest() {
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+        tree.add(30);
+        tree.add(70);
+        tree.add(80);
+
+        tree.add(50);
+
+        tree.add(53);
+        assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=BinaryNode{data=70, leftNode=BinaryNode{data=50, leftNode=null, rightNode=BinaryNode{data=53, leftNode=null, rightNode=null}}, rightNode=BinaryNode{data=80, leftNode=null, rightNode=null}}}}", tree.toString());
+
+    }
+//
+//
+
+    }

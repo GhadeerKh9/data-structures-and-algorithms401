@@ -3,6 +3,7 @@
  */
 package trees;
 
+import trees.trees.BinarySearchTree;
 import trees.trees.BinaryTreeClass;
 
 public class Library {
@@ -10,21 +11,21 @@ public class Library {
         System.out.println("hi");
 
 
-        BinaryTreeClass<Integer> tree = new BinaryTreeClass<>();
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+
         tree.add(30);
-        tree.add(70);
-        tree.add(80);
+//        tree.add(80);
 //        tree.add(20);
-//        tree.add(90);
-//        tree.add(10);
-        tree.add(50);
-//        tree.add(65);
-        tree.add(53);
+////        tree.add(90);
+////        tree.add(10);
+//        tree.add(50);
+////        tree.add(65);
+//        tree.add(53);
 
 
-//
-//        System.out.println(tree);
-//
+////
+        System.out.println(tree);
+////
 //        System.out.println(tree.contains(30));
 //        System.out.println(tree.contains(5));
 
@@ -33,8 +34,8 @@ public class Library {
 
 //        tree.postOrderTraversal();
 
-
-        tree.preOrderTraversal();
+//
+//        tree.preOrderTraversal();
 
 
 
