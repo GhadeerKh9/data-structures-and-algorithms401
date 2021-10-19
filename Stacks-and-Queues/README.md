@@ -41,6 +41,33 @@ I created two methods and used for and while loops and stacks methods such as pu
 input ==> stack1 ==> 1==>2==>3
 stack.enqueue(value)==>>1==>2>>>value
 
+# Challenge 12. First-in, First out Animal Shelter.
+
+# Challenge Summary
+
+This challenge was to create a class that contains methods for enqueueing and dequeueing dogs and cats that are of queue type.
+
+## Whiteboard Process
+
+![Image](animalShelter.png)
+
+## Approach & Efficiency
+
+I used if statements, instantiated queues objects.
+
+## Solution
+
+Code process
+
+enqueue
+que[---]
+cat ==> q [cat]
+dog==>[dog]
+
+dequeue
+
+dog==>[--]
+
 # Challenge 13. Multi-bracket Validation
 
 # Challenge Summary
