@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36352c60-7274-4535-a539-fd2e8edadd30" name="Changes" comment="" />
+    <list default="true" id="36352c60-7274-4535-a539-fd2e8edadd30" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,6 +197,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Library" />
       <item itemvalue="Gradle.LibraryTest.singleRootTreeTest" />
       <item itemvalue="JUnit.LibraryTest.emptyTree" />
       <item itemvalue="JUnit.LibraryTest.inOrderOrderTest" />
@@ -202,7 +205,6 @@
       <item itemvalue="JUnit.LibraryTest.containsTest" />
       <item itemvalue="JUnit.LibraryTest.preOrderTest" />
       <item itemvalue="JUnit.LibraryTest.postOrderTest" />
-      <item itemvalue="Application.Library" />
     </list>
     <recent_temporary>
       <list>

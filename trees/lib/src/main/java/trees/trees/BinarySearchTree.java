@@ -20,6 +20,8 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTreeClass<T
 
     }
 
+    
+
     public void addHelper(T data, BinaryNode<T> root){
 
         BinaryNode<T> newNode = new BinaryNode<>(data);
