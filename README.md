@@ -9,7 +9,4 @@
 | Code Challenge 3           | [Binary Search](https://github.com/GhadeerKh9/data-structures-and-algorithms401/blob/main/challenge3/README.md)  |
 | Code Challenge 5,6,7,8,9   | [LinkedList](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/Linked-list)              |
 | Code Challenge 10,11,12,13 | [Stacks and Queues](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/Stacks-and-Queues) |
-| Code Challenge 15, 16 | [Stacks and Queues](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/trees) |
-
-
-
+| Code Challenge 15, 16      | [Trees](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/trees)                         |

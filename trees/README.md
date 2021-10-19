@@ -1,7 +1,3 @@
-# Challenge Summary
-
-This challenge was to traverse a binary search tree and create include and contains methods.
-
 ## Approach & Efficiency
 
 I created a data and structure class and created the methods accordingly.
