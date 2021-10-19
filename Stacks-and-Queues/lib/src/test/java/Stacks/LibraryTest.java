@@ -3,10 +3,8 @@
  */
 package Stacks;
 
-import Stacks.structure.Brackets;
-import Stacks.structure.PseudoQueue;
+import Stacks.structure.*;
 import Stacks.structure.Queues;
-import Stacks.structure.Stack;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 class LibraryTest {
@@ -17,7 +15,7 @@ class LibraryTest {
 
         nodeOne.push("Ghadeer");
 
-        assertEquals("Stack{top=Node{data='Ghadeer', next=null}}",nodeOne.toString());
+        assertEquals("Stack{top=Node{data='Ghadeer', next=null}}", nodeOne.toString());
 
     }
 
@@ -31,10 +29,12 @@ class LibraryTest {
         nodeOne.push("G");
         nodeOne.pop();
 
-        assertEquals("Stack{top=Node{data='Gha', next=Node{data='Ghadeer', next=null}}}",nodeOne.toString());
+        assertEquals("Stack{top=Node{data='Gha', next=Node{data='Ghadeer', next=null}}}", nodeOne.toString());
+//
 
     }
-//
+
+    //
     @Test
     public void peekTest() {
         Stack nodeOne = new Stack();
@@ -44,9 +44,10 @@ class LibraryTest {
         nodeOne.push("G");
         nodeOne.peek();
 
-        assertEquals("G",nodeOne.peek());
+        assertEquals("G", nodeOne.peek());
 
     }
+
     @Test
     public void checkIsEmpty() {
         Stack nodeOne = new Stack();
@@ -59,9 +60,9 @@ class LibraryTest {
         nodeOne.pop();
 
 
-
     }
-//
+
+    //
 //
 //
     @Test
@@ -72,11 +73,12 @@ class LibraryTest {
         nodeTwo.enqueue("Gha");
         nodeTwo.enqueue("G");
 
-        assertEquals("Queues{front=Node{data='Ghadeer', next=Node{data='Gha', next=Node{data='G', next=null}}}, rear=Node{data='G', next=null}}",nodeTwo.toString());
+        assertEquals("Queues{front=Node{data='Ghadeer', next=Node{data='Gha', next=Node{data='G', next=null}}}, rear=Node{data='G', next=null}}", nodeTwo.toString());
 
 
     }
-//
+
+    //
 //
     @Test
     public void dequeueTest() {
@@ -87,10 +89,11 @@ class LibraryTest {
         nodeTwo.enqueue("G");
         nodeTwo.dequeue();
 
-        assertEquals("Gha",nodeTwo.dequeue());
+        assertEquals("Gha", nodeTwo.dequeue());
 
 
     }
+
     @Test
     public void peekQueueTest() {
         Queues nodeTwo = new Queues();
@@ -100,10 +103,11 @@ class LibraryTest {
         nodeTwo.enqueue("G");
         nodeTwo.peek();
 
-        assertEquals("Ghadeer",nodeTwo.peek());
+        assertEquals("Ghadeer", nodeTwo.peek());
 
 
     }
+
     @Test
     public void queueIsEmptyTest() {
         Queues nodeTwo = new Queues();
@@ -115,13 +119,13 @@ class LibraryTest {
         nodeTwo.dequeue();
         nodeTwo.dequeue();
 
-       assertTrue(nodeTwo.isEmpty());
+        assertTrue(nodeTwo.isEmpty());
 
 
     }
 
     @Test
-    public void validateBracketsTest(){
+    public void validateBracketsTest() {
 
         Brackets stack1 = new Brackets();
 
@@ -145,20 +149,48 @@ class LibraryTest {
         assertEquals("stack1========>Stack{top=Node{data='Khasawneh', next=Node{data='Ghadeer', next=null}}}", queue.toString());
     }
 
-     @Test
-     public void dequeueTestPseudo(){
+    @Test
+    public void dequeueTestPseudo() {
 
-         PseudoQueue queue = new PseudoQueue();
+        PseudoQueue queue = new PseudoQueue();
 
-         queue.enqueue("Ghadeer");
-         queue.enqueue("Khasawneh");
-         queue.dequeue();
+        queue.enqueue("Ghadeer");
+        queue.enqueue("Khasawneh");
+        queue.dequeue();
 
 
-
-        assertEquals("stack1========>Stack{top=Node{data='Khasawneh', next=Node{data='Ghadeer', next=null}}}",queue.toString());
+        assertEquals("stack1========>Stack{top=Node{data='Khasawneh', next=Node{data='Ghadeer', next=null}}}", queue.toString());
 
     }
 
+    @Test
+    public void shelterTest() {
 
+        AnimalShelter animalShelter = new AnimalShelter();
+
+        Animal catAnimal = new Cat("Bibi");
+        Cat cat1 = new Cat("Angora");
+
+
+        Animal dogAnimal = new Dog("Bla");
+        Dog dog2 = new Dog("Shephered");
+
+        animalShelter.enqueue(catAnimal);
+        animalShelter.enqueue(cat1);
+        animalShelter.enqueue(dogAnimal);
+        animalShelter.enqueue(dog2);
+        assertEquals("AnimalShelter{catQueue=Queues{front=Node{data='Bibi', next=Node{data='Angora', next=null}}, rear=Node{data='Angora', next=null}}, dogQueue=Queues{front=Node{data='Bla', next=Node{data='Shephered', next=null}}, rear=Node{data='Shephered', next=null}}}", animalShelter.toString());
+
+
+
+
+
+        animalShelter.dequeue("cat");
+        assertEquals("AnimalShelter{catQueue=Queues{front=Node{data='Angora', next=null}, rear=Node{data='Angora', next=null}}, dogQueue=Queues{front=Node{data='Bla', next=Node{data='Shephered', next=null}}, rear=Node{data='Shephered', next=null}}}", animalShelter.toString());
+
+
+        animalShelter.dequeue("dog");
+        assertEquals("AnimalShelter{catQueue=Queues{front=Node{data='Angora', next=null}, rear=Node{data='Angora', next=null}}, dogQueue=Queues{front=Node{data='Shephered', next=null}, rear=Node{data='Shephered', next=null}}}", animalShelter.toString());
+
+    }
 }

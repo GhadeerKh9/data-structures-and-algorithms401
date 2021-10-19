@@ -3,23 +3,20 @@
  */
 package Stacks;
 
-import Stacks.structure.Brackets;
-import Stacks.structure.PseudoQueue;
-import Stacks.structure.Queues;
-import Stacks.structure.Stack;
+import Stacks.structure.*;
 
 public class Library {
     public static void main(String[] args) {
-        Stack nodeOne = new Stack();
+//        Stack nodeOne = new Stack();
 
-
-
-
-
-
-        nodeOne.push("Ghadeer");
-        nodeOne.push("Gha");
-        nodeOne.push("G");
+//
+//
+//
+//
+//
+//        nodeOne.push("Ghadeer");
+//        nodeOne.push("Gha");
+//        nodeOne.push("G");
 
 
 //        nodeOne.pop();
@@ -28,13 +25,13 @@ public class Library {
 //        System.out.println(nodeOne.peek());
 
 
-        Queues nodeTwo = new Queues();
-
-        nodeTwo.enqueue("Ghadeer");
-        nodeTwo.enqueue("Gha");
-        nodeTwo.enqueue("G");
-
-        nodeTwo.peek();
+//        Queues nodeTwo = new Queues();
+//
+//        nodeTwo.enqueue("Ghadeer");
+//        nodeTwo.enqueue("Gha");
+//        nodeTwo.enqueue("G");
+//
+//        nodeTwo.peek();
 
 
 //        System.out.println(nodeTwo.peek());
@@ -54,7 +51,7 @@ public class Library {
 
 
 
-        PseudoQueue queue = new PseudoQueue();
+//        PseudoQueue queue = new PseudoQueue();
 
 //        queue.enqueue("Ghadeer");
 //        queue.enqueue("Khasawneh");
@@ -70,17 +67,50 @@ public class Library {
 //        System.out.println(queue.dequeue());
 
 
-        Stack nodeThree = new Stack();
+//        Stack nodeThree = new Stack();
+//
+//        nodeThree.push("10");
+//        nodeThree.push("15");
+//        nodeThree.push("20");
+//        nodeThree.push("18");
+////        nodeThree.getMaximum();
+//
+//
+//        System.out.println(nodeThree.getMaximum());
 
-        nodeThree.push("10");
-        nodeThree.push("15");
-        nodeThree.push("20");
-        nodeThree.push("18");
-//        nodeThree.getMaximum();
+
+        //////////////////////////////////////////////////////////////////////////////////////////////
+
+        AnimalShelter animalShelter = new AnimalShelter();
+
+        Animal catAnimal = new Cat("Bibi");
+        Cat cat1 = new Cat("Angora");
 
 
-        System.out.println(nodeThree.getMaximum());
 
+        Animal dogAnimal = new Dog("Bla");
+        Dog dog2 = new Dog("Shephered");
+
+
+        animalShelter.enqueue(catAnimal);
+        animalShelter.enqueue(cat1);
+
+        animalShelter.enqueue(dogAnimal);
+        animalShelter.enqueue(dog2);
+
+
+//        System.out.println(animalShelter);
+
+
+
+//        animalShelter.dequeue("cat");
+//        System.out.println(animalShelter);
+//
+        animalShelter.dequeue("dog");
+
+
+
+        System.out.println(animalShelter);
 
 
     }
