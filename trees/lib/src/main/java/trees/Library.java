@@ -33,7 +33,7 @@ public class Library {
 //        System.out.println(tree.contains(5));
 
 
-//        tree.inorderTraversal();
+        tree.inorderTraversal();
 
 //        tree.postOrderTraversal();
 

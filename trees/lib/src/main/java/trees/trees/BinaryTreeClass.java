@@ -4,9 +4,13 @@ import org.checkerframework.checker.units.qual.C;
 import trees.node.BinaryNode;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTreeClass<T extends Comparable<T>>{
+
+    Queues bla = new Queues();
 
 
     public BinaryNode<T> root;
@@ -80,32 +84,42 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 
 
     }
-    public int maximumValue() {
-        if (root == null) return 0;
-        if (root.getLeftNode().getRightNode() == null || root.getRightNode()== null) return root.getData();
-        int max = 0;
-        List<Integer> maxList = (List<Integer>) traversePostOrder((BinaryNode<T>) root);
-        for (int i = 0; i < maxList.size(); i++) {
-            if (maxList.get(i) >= max) {
-                max = maxList.get(i);
-            }
+//    public int maximumValue() {
+//        if (root == null) return 0;
+//        if (root.getLeftNode().getRightNode() == null || root.getRightNode()== null) return root.getData();
+//        int max = 0;
+//        List<Integer> maxList = (List<Integer>) traversePostOrder((BinaryNode<T>) root);
+//        for (int i = 0; i < maxList.size(); i++) {
+//            if (maxList.get(i) >= max) {
+//                max = maxList.get(i);
+//            }
+//        }
+//        return max;
+//    }
+//
+public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
+    if (isEmpty()) {
+        return null;
+    }
+    ArrayList<T> breadthList = new ArrayList<>();
+    Queue<BinaryNode<T>> treeQueue = new LinkedList<>();
+    BinaryNode<T> newNode = binaryTree.root;
+
+    treeQueue.add(newNode);
+
+    while(!treeQueue.isEmpty()){
+        if(treeQueue.peek().getLeftNode() != null){
+            treeQueue.add(treeQueue.peek().getLeftNode());
         }
-        return max;
+        if(treeQueue.peek().getRightNode() != null){
+            treeQueue.add(treeQueue.peek().getRightNode());
+        }
+        breadthList.add(treeQueue.remove().getData());
     }
 
+    return breadthList;
+}
 
-    public int maximumValue() {
-        if (root == null) return 0;
-        if (root.getLeftNode().getRightNode() == null || root.getRightNode()== null) return root.getData();
-        int max = 0;
-        List<Integer> maxList = (List<Integer>) traversePostOrder((BinaryNode<T>) root);
-        for (int i = 0; i < maxList.size(); i++) {
-            if (maxList.get(i) >= max) {
-                max = maxList.get(i);
-            }
-        }
-        return max;
-    }
 
 
     public boolean isEmpty(){
