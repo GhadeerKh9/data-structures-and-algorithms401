@@ -1,3 +1,11 @@
+## Approach & Efficiency
+
+I created a data and structure class and created the methods accordingly.
+
+## Solution
+
+I used inorder traversal, preorders traversal and post order traversal methods. Also created contains and includes methods.
+
 # Challenge 16
 
 This challenge was to to find the maximum value in a binary tree.
