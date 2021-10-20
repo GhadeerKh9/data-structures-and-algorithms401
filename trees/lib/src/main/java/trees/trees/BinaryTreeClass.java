@@ -1,19 +1,20 @@
 package trees.trees;
 
+import com.google.common.collect.Queues;
 import org.checkerframework.checker.units.qual.C;
 import trees.node.BinaryNode;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.sql.Array;
+import java.util.*;
 
 public class BinaryTreeClass<T extends Comparable<T>>{
 
-    Queues bla = new Queues();
+
 
 
     public BinaryNode<T> root;
+
+
 
     List<Integer> postOrderList = new ArrayList<>();
     public void inorderTraversal(){
@@ -97,33 +98,45 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 //        return max;
 //    }
 //
-public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
-    if (isEmpty()) {
-        return null;
+
+//    public static ArrayList<Integer> breadthFirst(BinaryTreeClass<Integer> binaryTree) {
+//        if (binaryTree.root == null) return null;
+//
+//        ArrayList<Integer> breadthFirstList = new ArrayList<>();
+//        Queues<Integer> myQueue = new Queues();
+//
+//        myQueue.enqueue(binaryTree.root);
+//
+//        while (!myQueue.isEmpty()) {
+//
+//            Node<Integer> front = myQueue.dequeue();
+//            breadthFirstList.add(front.value);
+//
+//            if (front.leftChild != null) {
+//                myQueue.enqueue(front.leftChild);
+//            }
+//            if (front.rightChild != null) {
+//                myQueue.enqueue(front.rightChild);
+//            }
+//        }
+//
+//        return breadthFirstList;
+//    }
+
+  
+
+
+
+    public void setRoot(BinaryNode<T> root) {
+        this.root = root;
     }
-    ArrayList<T> breadthList = new ArrayList<>();
-    Queue<BinaryNode<T>> treeQueue = new LinkedList<>();
-    BinaryNode<T> newNode = binaryTree.root;
-
-    treeQueue.add(newNode);
-
-    while(!treeQueue.isEmpty()){
-        if(treeQueue.peek().getLeftNode() != null){
-            treeQueue.add(treeQueue.peek().getLeftNode());
-        }
-        if(treeQueue.peek().getRightNode() != null){
-            treeQueue.add(treeQueue.peek().getRightNode());
-        }
-        breadthList.add(treeQueue.remove().getData());
-    }
-
-    return breadthList;
-}
-
-
 
     public boolean isEmpty(){
         return root == null;
+    }
+
+    public BinaryNode<T> getRoot() {
+        return root;
     }
 
     @Override

@@ -1,15 +1,14 @@
 package trees.trees;
 
-public class Queues {
+public class Queue<T> {
 
-
-    private Node front;
-    private Node rear;
+    private Node<T> front;
+    private Node<T> rear;
 
 
     public void enqueue(String data) {
         if (isEmpty()) {
-            Node node = new Node(data);
+            Node<T> node = new Node<>(data);
             front = node;
             rear = node;
         } else {
