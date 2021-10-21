@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36352c60-7274-4535-a539-fd2e8edadd30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/trees/BinaryTreeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/trees/BinaryTreeClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/trees/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/trees/BinarySearchTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
