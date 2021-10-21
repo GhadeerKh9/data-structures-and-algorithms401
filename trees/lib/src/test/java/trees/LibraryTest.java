@@ -21,6 +21,7 @@ class LibraryTest {
 //
 //
     }
+
     @Test
     public void addFirstNode() {
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
@@ -44,11 +45,11 @@ class LibraryTest {
         assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=BinaryNode{data=70, leftNode=BinaryNode{data=50, leftNode=null, rightNode=BinaryNode{data=53, leftNode=null, rightNode=null}}, rightNode=BinaryNode{data=80, leftNode=null, rightNode=null}}}}", tree.toString());
     }
 
-//
+    //
 //
 //
     @Test
-    public void containsTest(){
+    public void containsTest() {
 
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
         tree.add(30);
@@ -62,7 +63,8 @@ class LibraryTest {
         assertTrue(tree.contains(30));
         assertFalse(tree.contains(7));
     }
-//
+
+    //
     @Test
     public void inOrderOrderTest() {
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
@@ -107,4 +109,23 @@ class LibraryTest {
     }
 
 
+    @Test
+    void getMaxTest() throws Exception {
+        BinarySearchTree<Integer> tree2 = new BinarySearchTree<>();
+
+        tree2.add(75);
+        tree2.add(190);
+
+        tree2.add(51);
+        tree2.add(100);
+
+        tree2.add(53);
+        tree2.add(53);
+        tree2.add(150);
+        tree2.add(5);
+        tree2.add(0);
+
+        assertEquals(190,tree2.maximumValue());
+
     }
+}

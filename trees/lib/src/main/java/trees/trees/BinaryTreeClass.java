@@ -1,10 +1,7 @@
 package trees.trees;
 
-import com.google.common.collect.Queues;
-import org.checkerframework.checker.units.qual.C;
 import trees.node.BinaryNode;
 
-import java.sql.Array;
 import java.util.*;
 
 public class BinaryTreeClass<T extends Comparable<T>>{
@@ -99,7 +96,26 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 //        return max;
 //    }
 //
-//
+
+
+    public int maximumValue() {
+        if (root == null) {
+           return 0;
+
+        } else {
+            return maximumValueHelper((BinaryNode<Integer>) root);
+        }
+    }
+
+    private int maximumValueHelper(BinaryNode<Integer> root ) {
+        if (root.getRightNode() == null) {
+            return (int) root.getData();
+        } else {
+            return maximumValueHelper(root.getRightNode());
+        }
+    }
+
+
 public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
     if (isEmpty()) {
         return null;
