@@ -70,28 +70,6 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTreeClass<T
     }
 
 
-    public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
-        if (isEmpty()) {
-            return null;
-        }
-        ArrayList<T> breadthList = new ArrayList<>();
-        Queue<BinaryNode<T>> treeQueue = new LinkedList<>();
-        BinaryNode<T> newNode = binaryTree.root;
-
-        treeQueue.add(newNode);
-
-        while(!treeQueue.isEmpty()){
-            if(treeQueue.peek().getLeftNode() != null){
-                treeQueue.add(treeQueue.peek().getLeftNode());
-            }
-            if(treeQueue.peek().getRightNode() != null){
-                treeQueue.add(treeQueue.peek().getRightNode());
-            }
-            breadthList.add(treeQueue.remove().getData());
-        }
-
-        return breadthList;
-    }
 
 
     @Override
