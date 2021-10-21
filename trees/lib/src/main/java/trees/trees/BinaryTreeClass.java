@@ -83,19 +83,6 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 
 
     }
-//    public int maximumValue() {
-//        if (root == null) return 0;
-//        if (root.getLeftNode().getRightNode() == null || root.getRightNode()== null) return root.getData();
-//        int max = 0;
-//        List<Integer> maxList = (List<Integer>) traversePostOrder((BinaryNode<T>) root);
-//        for (int i = 0; i < maxList.size(); i++) {
-//            if (maxList.get(i) >= max) {
-//                max = maxList.get(i);
-//            }
-//        }
-//        return max;
-//    }
-//
 
 
     public int maximumValue() {
@@ -137,13 +124,6 @@ public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
     }
 
     return nodeList;
-
-
-
-
-
-
-
 
 }
 
