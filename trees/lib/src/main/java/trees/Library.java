@@ -47,15 +47,20 @@ public class Library {
 
 
 
-        tree2.add(80);
-        tree2.add(20);
-        tree2.add(90);
+        tree2.add(55);
+        tree2.add(75);
+        tree2.add(91);
 
+        tree2.add(51);
         tree2.add(50);
 
         tree2.add(53);
-
+//
         System.out.println( tree2.breadthFirst(tree2));
+//
+//        tree2.inorderTraversal();
+
+
 
 
 

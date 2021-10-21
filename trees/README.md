@@ -34,3 +34,16 @@ List = [1,5,6]
 5 < 0 ==> variable =0
 6 > variable ==> variable = 6
 return ==> 6
+
+# Code challenge 17
+# Challenge Summary
+This code was to Write a method that traverse a binary tree in first order breadth.
+
+## Whiteboard Process
+![]()
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->

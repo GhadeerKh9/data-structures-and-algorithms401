@@ -17,6 +17,7 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 
 
     List<Integer> postOrderList = new ArrayList<>();
+
     public void inorderTraversal(){
 
         if (isEmpty()) {
@@ -98,32 +99,31 @@ public class BinaryTreeClass<T extends Comparable<T>>{
 //        return max;
 //    }
 //
+//
+public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
+    if (isEmpty()) {
+        return null;
+    }
+    ArrayList<T> nodeList = new ArrayList<>();
+    Queue<BinaryNode<T>> queue = new LinkedList<>();
+    BinaryNode<T> node = binaryTree.root;
 
-//    public static ArrayList<Integer> breadthFirst(BinaryTreeClass<Integer> binaryTree) {
-//        if (binaryTree.root == null) return null;
-//
-//        ArrayList<Integer> breadthFirstList = new ArrayList<>();
-//        Queues<Integer> myQueue = new Queues();
-//
-//        myQueue.enqueue(binaryTree.root);
-//
-//        while (!myQueue.isEmpty()) {
-//
-//            Node<Integer> front = myQueue.dequeue();
-//            breadthFirstList.add(front.value);
-//
-//            if (front.leftChild != null) {
-//                myQueue.enqueue(front.leftChild);
-//            }
-//            if (front.rightChild != null) {
-//                myQueue.enqueue(front.rightChild);
-//            }
-//        }
-//
-//        return breadthFirstList;
-//    }
+    queue.add(node);
 
-  
+    while(!queue.isEmpty()){
+        if(queue.peek().getLeftNode() != null){
+            queue.add(queue.peek().getLeftNode());
+        }
+        if(queue.peek().getRightNode() != null){
+            queue.add(queue.peek().getRightNode());
+        }
+        nodeList.add(queue.remove().getData());
+    }
+
+    return nodeList;
+
+
+}
 
 
 
