@@ -8,7 +8,7 @@ import trees.trees.BinaryTreeClass;
 
 
 public class Library {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("hi");
 
 
@@ -47,16 +47,22 @@ public class Library {
 
 
 
-        tree2.add(55);
+
         tree2.add(75);
-        tree2.add(91);
+        tree2.add(190);
 
         tree2.add(51);
-        tree2.add(50);
+        tree2.add(100);
 
         tree2.add(53);
+        tree2.add(53);
+        tree2.add(150);
+        tree2.add(5);
+        tree2.add(0);
+
+        System.out.println(tree2.maximumValue());
 //
-        System.out.println( tree2.breadthFirst(tree2));
+//        System.out.println( tree2.breadthFirst(tree2));
 //
 //        tree2.inorderTraversal();
 
