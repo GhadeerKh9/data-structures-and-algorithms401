@@ -40,10 +40,22 @@ return ==> 6
 This code was to Write a method that traverse a binary tree in first order breadth.
 
 ## Whiteboard Process
-![]()
+![image](breadthTraversal.png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I used an arraylist and queue, while and if statements. 
 
 ## Solution
-<!-- Show how to run your code, and examples of it in action -->
+root = 1
+
+left = 2
+subtree of 2 ==>
+left = 4
+right = 5
+
+right = 3
+subtree of 3  ==>
+left = 6
+right = 7
+
+q = [2, 3] ==> [3, 4,5]==>[4,5]==>[4]
