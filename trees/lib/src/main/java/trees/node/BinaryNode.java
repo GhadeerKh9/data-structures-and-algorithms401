@@ -1,11 +1,15 @@
 package trees.node;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryNode<T>{
 
     private T data;
 
     private BinaryNode<T> leftNode;
     private BinaryNode<T> rightNode;
+    public List<BinaryNode<T>> child = new ArrayList<>();
 
     public BinaryNode(T data) {
         this.data = data;

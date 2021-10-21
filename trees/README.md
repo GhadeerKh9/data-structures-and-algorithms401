@@ -34,3 +34,28 @@ List = [1,5,6]
 5 < 0 ==> variable =0
 6 > variable ==> variable = 6
 return ==> 6
+
+# Code challenge 17
+# Challenge Summary
+This code was to Write a method that traverse a binary tree in first order breadth.
+
+## Whiteboard Process
+![image](breadthTraversal.png)
+
+## Approach & Efficiency
+I used an arraylist and queue, while and if statements. 
+
+## Solution
+root = 1
+
+left = 2
+subtree of 2 ==>
+left = 4
+right = 5
+
+right = 3
+subtree of 3  ==>
+left = 6
+right = 7
+
+q = [2, 3] ==> [3, 4,5]==>[4,5]==>[4]

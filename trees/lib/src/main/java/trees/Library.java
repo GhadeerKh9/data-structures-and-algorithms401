@@ -6,6 +6,7 @@ package trees;
 import trees.trees.BinarySearchTree;
 import trees.trees.BinaryTreeClass;
 
+
 public class Library {
     public static void main(String[] args) {
         System.out.println("hi");
@@ -23,6 +24,8 @@ public class Library {
         tree.add(53);
 
 
+//        System.out.println(tree.breadthFirst(tree));
+
 
 //        tree.findMaxvalue();
 
@@ -32,7 +35,7 @@ public class Library {
 //        System.out.println(tree.contains(30));
 //        System.out.println(tree.contains(5));
 
-
+//
 //        tree.inorderTraversal();
 
 //        tree.postOrderTraversal();
@@ -40,10 +43,29 @@ public class Library {
 //
 //        tree.preOrderTraversal();
 
+        BinarySearchTree<Integer> tree2 = new BinarySearchTree<>();
+
+
+
+        tree2.add(55);
+        tree2.add(75);
+        tree2.add(91);
+
+        tree2.add(51);
+        tree2.add(50);
+
+        tree2.add(53);
+//
+        System.out.println( tree2.breadthFirst(tree2));
+//
+//        tree2.inorderTraversal();
+
 
 
 
 
 
     }
+
+
 }

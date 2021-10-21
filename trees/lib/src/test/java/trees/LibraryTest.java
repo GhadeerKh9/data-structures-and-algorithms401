@@ -105,7 +105,6 @@ class LibraryTest {
         assertEquals("BinaryTreeClass{root=BinaryNode{data=30, leftNode=null, rightNode=BinaryNode{data=70, leftNode=BinaryNode{data=50, leftNode=null, rightNode=BinaryNode{data=53, leftNode=null, rightNode=null}}, rightNode=BinaryNode{data=80, leftNode=null, rightNode=null}}}}", tree.toString());
 
     }
-//
-//
+
 
     }
