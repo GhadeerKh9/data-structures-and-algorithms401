@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36352c60-7274-4535-a539-fd2e8edadd30" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/trees/trees/BinaryTreeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/trees/trees/BinaryTreeClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FizzBuzz/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FizzBuzz/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <recent name="\\wsl$\Ubuntu\home\ghadeer\data-structures-and-algorithms401\trees\lib\src\main\java\trees\trees\breadth" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LibraryTest.getMaxTest">
+  <component name="RunManager" selected="Application.Library">
     <configuration name="Library" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="trees.Library" />
       <module name="trees.lib.main" />
@@ -150,7 +151,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.getMaxTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <configuration name="LibraryTest.getMaxTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="trees.lib.test" />
       <extension name="coverage">
         <pattern>
@@ -227,19 +228,19 @@
       <item itemvalue="Gradle.LibraryTest.singleRootTreeTest" />
       <item itemvalue="JUnit.LibraryTest.emptyTree" />
       <item itemvalue="JUnit.LibraryTest.inOrderOrderTest" />
+      <item itemvalue="JUnit.LibraryTest.getMaxTest" />
       <item itemvalue="JUnit.LibraryTest.addTest" />
       <item itemvalue="JUnit.LibraryTest.containsTest" />
       <item itemvalue="JUnit.LibraryTest.preOrderTest" />
       <item itemvalue="JUnit.LibraryTest.postOrderTest" />
-      <item itemvalue="JUnit.LibraryTest.getMaxTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LibraryTest.getMaxTest" />
         <item itemvalue="Application.Library" />
         <item itemvalue="JUnit.LibraryTest.postOrderTest" />
         <item itemvalue="JUnit.LibraryTest.preOrderTest" />
         <item itemvalue="JUnit.LibraryTest.containsTest" />
-        <item itemvalue="JUnit.LibraryTest.addTest" />
       </list>
     </recent_temporary>
   </component>

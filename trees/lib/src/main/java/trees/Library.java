@@ -4,11 +4,11 @@
 package trees;
 
 import trees.trees.BinarySearchTree;
-import trees.trees.BinaryTreeClass;
+
 
 
 public class Library {
-    public static void main(String[] args) throws Exception {
+    public static <T extends Comparable<T>> void main(String[] args) throws Exception {
         System.out.println("hi");
 
 
@@ -48,7 +48,7 @@ public class Library {
 
 
 
-        tree2.add(75);
+        tree2.add(20);
         tree2.add(190);
 
         tree2.add(51);
@@ -56,15 +56,28 @@ public class Library {
 
         tree2.add(53);
         tree2.add(53);
+        tree2.add(30);
+        tree2.add(150);
+        tree2.add(3);
         tree2.add(150);
         tree2.add(5);
         tree2.add(0);
 
-        System.out.println(tree2.maximumValue());
+
+
+
+
+//        System.out.println(tree2.maximumValue());
+//        System.out.println(tree2.treeFizzBuzz(tree2.getRoot()));
 //
 //        System.out.println( tree2.breadthFirst(tree2));
 //
 //        tree2.inorderTraversal();
+
+//        System.out.println( tree2.breadthFirst(tree2));
+//        System.out.println( tree2.treeFizzBuzz(tree2));
+
+
 
 
 

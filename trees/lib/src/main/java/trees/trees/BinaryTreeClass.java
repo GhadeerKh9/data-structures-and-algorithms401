@@ -2,6 +2,8 @@ package trees.trees;
 
 import trees.node.BinaryNode;
 
+
+
 import java.util.*;
 
 public class BinaryTreeClass<T extends Comparable<T>>{
@@ -113,11 +115,11 @@ public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
 
     queue.add(node);
 
-    while(!queue.isEmpty()){
-        if(queue.peek().getLeftNode() != null){
+    while (!queue.isEmpty()) {
+        if (queue.peek().getLeftNode() != null) {
             queue.add(queue.peek().getLeftNode());
         }
-        if(queue.peek().getRightNode() != null){
+        if (queue.peek().getRightNode() != null) {
             queue.add(queue.peek().getRightNode());
         }
         nodeList.add(queue.remove().getData());
@@ -125,8 +127,8 @@ public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
 
     return nodeList;
 
-}
 
+}
 
 
     public void setRoot(BinaryNode<T> root) {
