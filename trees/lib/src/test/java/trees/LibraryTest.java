@@ -128,4 +128,20 @@ class LibraryTest {
         assertEquals(190,tree2.maximumValue());
 
     }
+
+    @Test
+    void oddNumbersTest() throws Exception {
+        BinarySearchTree<Integer> tree2 = new BinarySearchTree<>();
+
+        tree2.add(2);
+        tree2.add(3);
+        tree2.add(5);
+        tree2.add(10);
+        tree2.add(1);
+        tree2.add(7);
+        tree2.add(11);
+
+        assertEquals(27,tree2.sumOfOddNumbers());
+
+    }
 }
