@@ -23,6 +23,8 @@ public class BinaryTreeClass<T extends Comparable<T>>{
             return;
         }
 
+
+
         traverseInorder(root);
     }
 
@@ -129,6 +131,51 @@ public ArrayList<T> breadthFirst(BinaryTreeClass<T> binaryTree) {
 
 
 }
+////////////////////////////////////////////////////////////////
+    /// methods for sum of odd numbers
+
+    public ArrayList<T> preOrderSecondtraversal() {
+
+        if (isEmpty()) {
+            return null;
+        }
+        ArrayList<T> arrayList = new ArrayList<>();
+
+        helperTraversal(root, arrayList);
+
+        return arrayList;
+    }
+
+    private void helperTraversal(BinaryNode<T> root, ArrayList<T> arrayList) {
+
+        arrayList.add(root.getData());
+
+        if (root.getLeftNode() != null) {
+            helperTraversal(root.getLeftNode(), arrayList);
+        }
+        if (root.getRightNode() != null) {
+            helperTraversal(root.getRightNode(), arrayList);
+        }
+    }
+
+
+
+    public int sumOfOddNumbers() {
+        if (isEmpty()) {
+            return 0;
+        }
+        ArrayList<T> someList = preOrderSecondtraversal();
+        int counter = 0;
+
+        for (int i = 0; i < someList.size(); i++) {
+            if (Integer.parseInt(someList.get(i) + "") % 2 != 0) {
+                counter = counter + Integer.parseInt(someList.get(i) + "");
+            }
+        }
+        return counter;
+    }
+
+/////////////////////////////////////////////////////////////////////////////////////////
 
 
     public void setRoot(BinaryNode<T> root) {
