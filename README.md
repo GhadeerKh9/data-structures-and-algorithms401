@@ -11,4 +11,4 @@
 | Code Challenge 10,11,12,13 | [Stacks and Queues](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/Stacks-and-Queues) |
 | Code Challenge 15, 16      | [Trees](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/trees)
 | Code Challenge 18    | [FizzBuzz](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/FizzBuzz)
-| Code Challenge 19    | [Sum Of odd Numbers](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/FizzBuzz)                         |
+| Code Challenge 19    | [Sum Of odd Numbers](https://github.com/GhadeerKh9/data-structures-and-algorithms401/tree/main/trees)                         |
