@@ -60,3 +60,21 @@ right = 7
 
 q = [2, 3] ==> [3, 4,5]==>[4,5]==>[4]
 
+
+# Code challenge 19
+# Challenge Summary
+This challenge was about creating  a methhod that calculates the sum of the odd numbers in a tree
+
+## Whiteboard Process
+![image](sumOfOddNumbers.png)
+
+## Approach & Efficiency
+I used recursion to call a function multiple times and traverse through the tree and add the nodes to a list and then sum the adds up the odd numbers together using a while loop.
+
+## Solution
+
+
+list [1,], counter ==>1
+list[1,3] ==> counter==>4
+list[1,2,3], counter ==> 4
+return 4
