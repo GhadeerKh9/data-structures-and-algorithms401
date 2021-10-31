@@ -3,11 +3,18 @@
  */
 package chalenge26;
 
+import java.util.Arrays;
+
 public class Library {
     public static void main(String[] args) {
         InsertionSort insertionSort = new InsertionSort();
 
 
-        insertionSort.insertionSort();
+
+        int[] arr = {3,5,4,2,7,1,11};
+        insertionSort.insertionSort(arr);
+
+
+        System.out.println(Arrays.toString(arr));
     }
 }
