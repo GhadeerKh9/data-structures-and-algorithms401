@@ -4,11 +4,23 @@
 package chalenge26;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
-    @Test void someLibraryMethodReturnsTrue() {
-        Library classUnderTest = new Library();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    @Test
+    public void insertionSortTest1(){
+
+        InsertionSort insertionSort = new InsertionSort();
+
+
+
+        int[] arr = {3,5,4,2,7,1,11};
+        insertionSort.insertionSort(arr);
+
+
+        assertEquals("[1, 2, 3, 4, 5, 7, 11]", Arrays.toString(arr));
     }
 }
