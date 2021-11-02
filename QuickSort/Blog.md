@@ -6,8 +6,11 @@
 ## Whiteboard Process
 
 
+
+![image](Whiteboard.png)
+
 ![image](Verification.jpeg)
 
 
-![image](Whiteboard.png)
+
 
