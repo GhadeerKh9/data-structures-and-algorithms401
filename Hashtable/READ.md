@@ -13,7 +13,7 @@ We used while and for loops and created node class and and hashtable class.
 This challenge was to Write a method that takes a string and returns back the first repeated word of the string
 
 ## Whiteboard Process
-![image]()
+![image](WhiteBoard2.png)
 
 ## Approach & Efficiency
 #### Get all the letters to be in lower case
