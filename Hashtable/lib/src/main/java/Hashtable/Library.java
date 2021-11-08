@@ -9,8 +9,9 @@ public class Library {
     public static void main(String[] args) {
 
 
-        HashTable<String, Integer> grades = new HashTable<>();
+//        HashTable<String, Integer> grades = new HashTable<>();
 
+        HashTable<String, Integer> grades = new HashTable<String, Integer>();
 
         grades.add("Ahmad",90);
         grades.add("Rana", 95);
@@ -32,4 +33,35 @@ public class Library {
 
 
     }
+      BinaryTree tree1 = new BinaryTree();
+            tree1.setRoot(new BinaryTreeNode(150));
+tree1.getRoot().setLeft(new BinaryTreeNode(100));
+tree1.getRoot().setRight(new BinaryTreeNode(250));
+tree1.getRoot().getRight().setLeft(new BinaryTreeNode(200));
+tree1.getRoot().getRight().setRight(new BinaryTreeNode(350));
+tree1.getRoot().getRight().getRight().setLeft(new BinaryTreeNode(300));
+tree1.getRoot().getRight().getRight().setRight(new BinaryTreeNode(500));
+tree1.getRoot().getLeft().setLeft(new BinaryTreeNode(75));
+tree1.getRoot().getLeft().setRight(new BinaryTreeNode(160));
+tree1.getRoot().getLeft().getRight().setLeft(new BinaryTreeNode(125));
+tree1.getRoot().getLeft().getRight().setRight(new BinaryTreeNode(175));
+
+
+
+
+tree2.setRoot(new BinaryTreeNode(42));
+tree2.getRoot().setLeft(new BinaryTreeNode(100));
+tree2.getRoot().setRight(new BinaryTreeNode(600));
+tree2.getRoot().getRight().setLeft(new BinaryTreeNode(200));
+tree2.getRoot().getRight().setRight(new BinaryTreeNode(350));
+tree2.getRoot().getRight().getRight().setLeft(new BinaryTreeNode(4));
+tree2.getRoot().getRight().getRight().setRight(new BinaryTreeNode(500));
+tree2.getRoot().getLeft().setLeft(new BinaryTreeNode(15));
+tree2.getRoot().getLeft().setRight(new BinaryTreeNode(160));
+tree2.getRoot().getLeft().getRight().setLeft(new BinaryTreeNode(125));
+tree2.getRoot().getLeft().getRight().setRight(new BinaryTreeNode(175));
+
+
+
+
 }
