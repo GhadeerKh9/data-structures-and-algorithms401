@@ -3,65 +3,68 @@
  */
 package Hashtable;
 
-import org.checkerframework.checker.units.qual.K;
-
 public class Library {
     public static void main(String[] args) {
 
 
 //        HashTable<String, Integer> grades = new HashTable<>();
 
-        HashTable<String, Integer> grades = new HashTable<String, Integer>();
+//        HashTable<String, Integer> grades = new HashTable<String, Integer>();
+//
+//        grades.add("Ahmad",90);
+//        grades.add("Rana", 95);
+//        grades.add("Mohammad", 80);
+//        grades.add("Saja", 50);
+//
+//        System.out.println(grades.getSize());
+//        System.out.println(grades.getValue("Rana"));
+//
+//        System.out.println(grades.getSize());
+//        System.out.println(grades.contains("Ali"));
+//
+//        System.out.println(grades.contains("Saja"));
+//
+//
+//
+//        String paragraph3= "My name my age my gender";
+//        System.out.println(grades.repeatedWord(paragraph3));
+//
+//
 
-        grades.add("Ahmad",90);
-        grades.add("Rana", 95);
-        grades.add("Mohammad", 80);
-        grades.add("Saja", 50);
 
-        System.out.println(grades.getSize());
-        System.out.println(grades.getValue("Rana"));
+        HashTable<Integer, Integer> intersection = new HashTable<Integer, Integer>();
 
-        System.out.println(grades.getSize());
-        System.out.println(grades.contains("Ali"));
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
 
-        System.out.println(grades.contains("Saja"));
+        tree1.setRoot(new TreeNode(1));
+        tree1.getRoot().setLeft(new TreeNode(2));
+        tree1.getRoot().setRight(new TreeNode(3));
+        tree1.getRoot().getRight().setLeft(new TreeNode(4));
+        tree1.getRoot().getRight().setRight(new TreeNode(5));
+        tree1.getRoot().getRight().getRight().setLeft(new TreeNode(6));
+        tree1.getRoot().getRight().getRight().setRight(new TreeNode(7));
+        tree1.getRoot().getLeft().setLeft(new TreeNode(8));
+
+
+        tree2.setRoot(new TreeNode(0));
+        tree2.getRoot().setLeft(new TreeNode(2));
+        tree2.getRoot().setRight(new TreeNode(0));
+        tree2.getRoot().getRight().setLeft(new TreeNode(4));
+        tree2.getRoot().getRight().setRight(new TreeNode(5));
+        tree2.getRoot().getRight().getRight().setLeft(new TreeNode(0));
+        tree2.getRoot().getRight().getRight().setRight(new TreeNode(0));
+        tree2.getRoot().getLeft().setLeft(new TreeNode(8));
 
 
 
-        String paragraph3= "My name my age my gender";
-        System.out.println(grades.repeatedWord(paragraph3));
+        System.out.println(intersection.treeIntersection(tree1, tree2));
+
+        System.out.println("================================");
+
+
 
 
     }
-      BinaryTree tree1 = new BinaryTree();
-            tree1.setRoot(new BinaryTreeNode(150));
-tree1.getRoot().setLeft(new BinaryTreeNode(100));
-tree1.getRoot().setRight(new BinaryTreeNode(250));
-tree1.getRoot().getRight().setLeft(new BinaryTreeNode(200));
-tree1.getRoot().getRight().setRight(new BinaryTreeNode(350));
-tree1.getRoot().getRight().getRight().setLeft(new BinaryTreeNode(300));
-tree1.getRoot().getRight().getRight().setRight(new BinaryTreeNode(500));
-tree1.getRoot().getLeft().setLeft(new BinaryTreeNode(75));
-tree1.getRoot().getLeft().setRight(new BinaryTreeNode(160));
-tree1.getRoot().getLeft().getRight().setLeft(new BinaryTreeNode(125));
-tree1.getRoot().getLeft().getRight().setRight(new BinaryTreeNode(175));
-
-
-
-
-tree2.setRoot(new BinaryTreeNode(42));
-tree2.getRoot().setLeft(new BinaryTreeNode(100));
-tree2.getRoot().setRight(new BinaryTreeNode(600));
-tree2.getRoot().getRight().setLeft(new BinaryTreeNode(200));
-tree2.getRoot().getRight().setRight(new BinaryTreeNode(350));
-tree2.getRoot().getRight().getRight().setLeft(new BinaryTreeNode(4));
-tree2.getRoot().getRight().getRight().setRight(new BinaryTreeNode(500));
-tree2.getRoot().getLeft().setLeft(new BinaryTreeNode(15));
-tree2.getRoot().getLeft().setRight(new BinaryTreeNode(160));
-tree2.getRoot().getLeft().getRight().setLeft(new BinaryTreeNode(125));
-tree2.getRoot().getLeft().getRight().setRight(new BinaryTreeNode(175));
-
-
-
 
 }

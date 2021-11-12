@@ -10,7 +10,7 @@ class LibraryTest {
     @Test
     public void test(){
 
-        HashTable<String, Integer> grades = new HashTable<>();
+        HashTable<String, Integer> grades = new HashTable<String, Integer>();
 
         assertTrue(grades.isEmpty());
 
@@ -39,6 +39,72 @@ class LibraryTest {
 
 
     }
+
+    @Test
+    public void intersectionTest(){
+
+        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+
+        tree1.setRoot(new TreeNode(1));
+        tree1.getRoot().setLeft(new TreeNode(2));
+        tree1.getRoot().setRight(new TreeNode(3));
+        tree1.getRoot().getRight().setLeft(new TreeNode(4));
+
+        tree2.setRoot(new TreeNode(0));
+        tree2.getRoot().setLeft(new TreeNode(2));
+        tree2.getRoot().setRight(new TreeNode(0));
+        tree2.getRoot().getRight().setLeft(new TreeNode(4));
+
+        assertEquals("[2, 4]", trees.treeIntersection(tree1,tree2).toString());
+
+    }
+
+    @Test
+    public void noIntersectionTest(){
+
+        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+
+        tree1.setRoot(new TreeNode(1));
+        tree1.getRoot().setLeft(new TreeNode(2));
+        tree1.getRoot().setRight(new TreeNode(3));
+        tree1.getRoot().getRight().setLeft(new TreeNode(4));
+
+        tree2.setRoot(new TreeNode(6));
+        tree2.getRoot().setLeft(new TreeNode(7));
+        tree2.getRoot().setRight(new TreeNode(8));
+        tree2.getRoot().getRight().setLeft(new TreeNode(9));
+
+        assertEquals("[]", trees.treeIntersection(tree1,tree2).toString());
+
+    }
+
+    @Test
+    public void unEvenNodesTest(){
+
+        HashTable<Integer,Integer> trees = new HashTable<Integer, Integer>();
+        BinaryTree tree1 = new BinaryTree();
+        BinaryTree tree2 = new BinaryTree();
+
+        tree1.setRoot(new TreeNode(1));
+        tree1.getRoot().setLeft(new TreeNode(2));
+        tree1.getRoot().setRight(new TreeNode(3));
+        tree1.getRoot().getRight().setLeft(new TreeNode(4));
+
+        tree2.setRoot(new TreeNode(0));
+        tree2.getRoot().setLeft(new TreeNode(2));
+        tree2.getRoot().setRight(new TreeNode(0));
+        tree2.getRoot().getRight().setLeft(new TreeNode(4));
+        tree2.getRoot().getRight().setRight(new TreeNode(5));
+
+        assertEquals("[2, 4]", trees.treeIntersection(tree1,tree2).toString());
+
+    }
+
+
 
 
 }

@@ -3,10 +3,8 @@ package Hashtable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTree {
-
-
-    Node root;
+public class BinaryTree<T extends Comparable<T>>{
+    TreeNode root;
 
     public BinaryTree() {
         root = null;
@@ -17,59 +15,63 @@ public class BinaryTree {
     List<Integer> preOrderList = new ArrayList<>(); // FOR TEST
 
 
-    public void postOrder(Node node){
+    public void postOrder(TreeNode treeNode){
 
-        if(node == null){
+        if(treeNode == null){
             return;
         }
 
         // recur left
-        postOrder(node.getLeft());
+        postOrder(treeNode.getLeft());
 
         // recur right
-        postOrder(node.getRight());
+        postOrder(treeNode.getRight());
 
         //  print the value
-        System.out.print(node.getKey() + " ");
-        postOrderList.add(node.getKey());
+        System.out.print(treeNode.getKey() + " ");
+        postOrderList.add(treeNode.getKey());
     }
 
-    public void inOrder(Node node ){
+    public void inOrder(TreeNode treeNode){
 
-        if(node == null){
+        if(treeNode == null){
             return;
         }
 
-        inOrder(node.getLeft());
+        inOrder(treeNode.getLeft());
 
-        System.out.print(node.getKey()+" ");
-        inOrderList.add(node.getKey());
+        System.out.print(treeNode.getKey()+" ");
+        inOrderList.add(treeNode.getKey());
 
-        inOrder(node.getRight());
+        inOrder(treeNode.getRight());
 
     }
 
-    public void preOrder(Node node){
+    public void preOrder(TreeNode treeNode){
 
-        if(node == null){
+        if(treeNode == null){
             return;
         }
 
-        System.out.print(node.getKey() + " ");
-        preOrderList.add(node.getKey());
+        System.out.print(treeNode.getKey() + " ");
+        preOrderList.add(treeNode.getKey());
 
-        preOrder(node.getLeft());
+        preOrder(treeNode.getLeft());
 
-        preOrder(node.getRight());
+        preOrder(treeNode.getRight());
     }
 
-    public Node getRoot() {
+    public TreeNode getRoot() {
         return root;
     }
 
-    public void setRoot(Node root) {
+    public void setRoot(TreeNode root) {
         this.root = root;
     }
+
+
+
+
 
     @Override
     public String toString() {
@@ -108,6 +110,4 @@ public class BinaryTree {
         }
 
     }
-
-
 }

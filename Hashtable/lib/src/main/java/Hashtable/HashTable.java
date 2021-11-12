@@ -135,49 +135,54 @@ public class HashTable<K,V> {
     }
 
     public HashMap<Integer,Integer> hashMap = new HashMap<>();
-    public List<Integer> intersections = new ArrayList<>();
+    public List<Integer> list = new ArrayList<>();
 
-    public List<Integer> treeIntersection(BinaryTree tree1, BinaryTree tree2){
+    public List<Integer> treeIntersection(BinaryTree firstTree, BinaryTree secondTree){
 
-        if (tree1.getRoot() == null || tree2.getRoot()  == null) {
+        if (firstTree.getRoot() == null || secondTree.getRoot()  == null) {
             return null;
         }
 
-        traverse(tree2.getRoot() );
+        treeTraversal(secondTree.getRoot() );
 
-        compare(tree1.getRoot() );
+        nodesComparison(firstTree.getRoot() );
 
-        return intersections;
+        return list;
     }
 
-    public void traverse(Node node) {
+    public void treeTraversal(TreeNode treeNode) {
 
-        if (node != null) {
+        if (treeNode != null) {
 
-            int count = 0 ;
-            if(hashMap.get(node.getKey()) == null){
-                count = 1;
+            int counter = 0 ;
+            if(hashMap.get(treeNode.getKey()) == null){
+                counter = 1;
             }else{
-                count = count +1;
+                counter = counter +1;
             }
 
-            hashMap.put(node.getKey(),count);
+            hashMap.put(treeNode.getKey(),counter);
 
-            traverse(node.getLeft());
-            traverse(node.getRight());
+            treeTraversal(treeNode.getLeft());
+            treeTraversal(treeNode.getRight());
         }
     }
 
-    public void compare(Node node){
-        if (node != null) {
-            if (hashMap.get(node.getKey()) != null){
-                intersections.add(node.getKey());
+    public void nodesComparison(TreeNode treeNode){
+        if (treeNode != null) {
+            if (hashMap.get(treeNode.getKey()) != null){
+                list.add(treeNode.getKey());
             }
-            compare(node.getLeft());
-            compare(node.getRight());
+            nodesComparison(treeNode.getLeft());
+            nodesComparison(treeNode.getRight());
         }
 
     }
+
+
+
+
+
     @Override
     public String toString() {
         return "HashTable{" +
