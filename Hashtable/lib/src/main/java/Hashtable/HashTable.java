@@ -1,8 +1,6 @@
 package Hashtable;
 
-import java.util.ArrayList;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 
 public class HashTable<K,V> {
 
@@ -134,6 +132,65 @@ public class HashTable<K,V> {
         }
 
         return "None";
+    }
+
+    public HashMap<Integer,Integer> hashMap = new HashMap<>();
+    public List<Integer> list = new ArrayList<>();
+
+    public List<Integer> treeIntersection(BinaryTree firstTree, BinaryTree secondTree){
+
+        if (firstTree.getRoot() == null || secondTree.getRoot()  == null) {
+            return null;
+        }
+
+        treeTraversal(secondTree.getRoot() );
+
+        nodesComparison(firstTree.getRoot() );
+
+        return list;
+    }
+
+    public void treeTraversal(TreeNode treeNode) {
+
+        if (treeNode != null) {
+
+            int counter = 0 ;
+            if(hashMap.get(treeNode.getKey()) == null){
+                counter = 1;
+            }else{
+                counter = counter +1;
+            }
+
+            hashMap.put(treeNode.getKey(),counter);
+
+            treeTraversal(treeNode.getLeft());
+            treeTraversal(treeNode.getRight());
+        }
+    }
+
+    public void nodesComparison(TreeNode treeNode){
+        if (treeNode != null) {
+            if (hashMap.get(treeNode.getKey()) != null){
+                list.add(treeNode.getKey());
+            }
+            nodesComparison(treeNode.getLeft());
+            nodesComparison(treeNode.getRight());
+        }
+
+    }
+
+
+    public static List<String> leftJoin(HashMap<String, String> hashTableOne, HashMap<String, String> hashTableTwo) {
+
+        if (hashTableOne.keySet().isEmpty()) {
+            return null;
+        }
+        List<String> list = new ArrayList<>();
+        for (String node : hashTableOne.keySet()) {
+
+            list.add("[ " + node + ", " + hashTableOne.get(node) + ", " + hashTableTwo.get(node) + " ]");
+        }
+        return list;
     }
 
 
