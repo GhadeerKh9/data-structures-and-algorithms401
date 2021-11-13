@@ -1,7 +1,7 @@
 # Hashtables
 
 
-## Challenge
+## Challenge 30
 This challenge was to create a hashtable, add nodes to it, check if it contains specific things.
 
 ## Approach & Efficiency
@@ -34,13 +34,13 @@ value of my = 1
 return ==> my
 
 
-# Challenge 31
+# Challenge 32
 This challenge was to write a function that takes two trees and returns back the intersected nodes.
 ## Whiteboard Process
 ![image](intersection.png)
 
 ## Approach & Efficiency
-#### Get all the letters to be in lower case
+
 * Create a function that takes two trees.
 *  Check if both the trees is null or one of them is null and return null.
 * Create a function that traverse one of the trees and put its nodes in a hashtable as keys.
@@ -56,3 +56,31 @@ tree2 =[0,2]
 ==> 2 != null ==> list = [2]
 
 return [2]
+
+
+# Challenge 33
+This challenge was to write  a function that takes two hastables and returns a list that contains keys with its correspondent values from table one and table two and returns the key with its correspondent value and null if it exist in only one of the tables## Whiteboard Process
+![image](leftJoin.png)
+
+## Approach & Efficiency Create a method that accepts in two hashtables.
+* Check if one of the tables is null empty and return null
+-  Use a for loop to loop over the one of the tables and add to the list the keys and values of first table and the value of the second table if there's any
+- return the list
+
+Big O
+Time O(n), 
+space O (n)
+
+
+## Solution
+Hashtable 1 =  [G, a]
+                        [L, a]
+Hashtable 2 = [G, b]
+                        [k, C]
+
+List==>first iteration  [G, a, b]
+
+list ==> 2nd iteration [[G, a, b], L, a , null]]
+list ==> 3rd iteration [[G, a, b], L, a , null,K, c, null]]
+
+

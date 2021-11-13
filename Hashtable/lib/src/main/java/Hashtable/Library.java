@@ -3,6 +3,8 @@
  */
 package Hashtable;
 
+import java.util.HashMap;
+
 public class Library {
     public static void main(String[] args) {
 
@@ -30,41 +32,59 @@ public class Library {
 //        System.out.println(grades.repeatedWord(paragraph3));
 //
 //
+//
+//
+//        HashTable<Integer, Integer> intersection = new HashTable<Integer, Integer>();
+//
+//        BinaryTree tree1 = new BinaryTree();
+//        BinaryTree tree2 = new BinaryTree();
+//
+//        tree1.setRoot(new TreeNode(1));
+//        tree1.getRoot().setLeft(new TreeNode(2));
+//        tree1.getRoot().setRight(new TreeNode(3));
+//        tree1.getRoot().getRight().setLeft(new TreeNode(4));
+//        tree1.getRoot().getRight().setRight(new TreeNode(5));
+//        tree1.getRoot().getRight().getRight().setLeft(new TreeNode(6));
+//        tree1.getRoot().getRight().getRight().setRight(new TreeNode(7));
+//        tree1.getRoot().getLeft().setLeft(new TreeNode(8));
+//
+//
+//        tree2.setRoot(new TreeNode(0));
+//        tree2.getRoot().setLeft(new TreeNode(2));
+//        tree2.getRoot().setRight(new TreeNode(0));
+//        tree2.getRoot().getRight().setLeft(new TreeNode(4));
+//        tree2.getRoot().getRight().setRight(new TreeNode(5));
+//        tree2.getRoot().getRight().getRight().setLeft(new TreeNode(0));
+//        tree2.getRoot().getRight().getRight().setRight(new TreeNode(0));
+//        tree2.getRoot().getLeft().setLeft(new TreeNode(8));
+//
+//
+//
+//        System.out.println(intersection.treeIntersection(tree1, tree2));
+//
+//        System.out.println("================================");
+//
+//
 
 
-        HashTable<Integer, Integer> intersection = new HashTable<Integer, Integer>();
 
-        BinaryTree tree1 = new BinaryTree();
-        BinaryTree tree2 = new BinaryTree();
+        HashMap<String, String> hashTableOne = new HashMap<>();
+        HashMap<String, String> hashTableTwo = new HashMap<>();
 
-        tree1.setRoot(new TreeNode(1));
-        tree1.getRoot().setLeft(new TreeNode(2));
-        tree1.getRoot().setRight(new TreeNode(3));
-        tree1.getRoot().getRight().setLeft(new TreeNode(4));
-        tree1.getRoot().getRight().setRight(new TreeNode(5));
-        tree1.getRoot().getRight().getRight().setLeft(new TreeNode(6));
-        tree1.getRoot().getRight().getRight().setRight(new TreeNode(7));
-        tree1.getRoot().getLeft().setLeft(new TreeNode(8));
+        hashTableOne.put("exist", "be");
+        hashTableOne.put("see", "view");
+        hashTableOne.put("right", "correct");
+        hashTableOne.put("help", "assist");
 
 
-        tree2.setRoot(new TreeNode(0));
-        tree2.getRoot().setLeft(new TreeNode(2));
-        tree2.getRoot().setRight(new TreeNode(0));
-        tree2.getRoot().getRight().setLeft(new TreeNode(4));
-        tree2.getRoot().getRight().setRight(new TreeNode(5));
-        tree2.getRoot().getRight().getRight().setLeft(new TreeNode(0));
-        tree2.getRoot().getRight().getRight().setRight(new TreeNode(0));
-        tree2.getRoot().getLeft().setLeft(new TreeNode(8));
+        hashTableTwo.put("exist", "not to be");
+        hashTableTwo.put("see", "don't see");
+        hashTableTwo.put("right", "wrong");
+        hashTableTwo.put("like", "dislike");
 
-
-
-        System.out.println(intersection.treeIntersection(tree1, tree2));
-
-        System.out.println("================================");
-
-
-
+        System.out.println(HashTable.leftJoin(hashTableOne, hashTableTwo));
+    }
 
     }
 
-}
+

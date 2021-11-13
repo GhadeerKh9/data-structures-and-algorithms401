@@ -4,6 +4,9 @@
 package Hashtable;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -105,7 +108,77 @@ class LibraryTest {
     }
 
 
+    //////////////////////////// leftJoin
 
+    @Test
+    public void leftJoinTest(){
+
+
+        HashMap hashTableOne = new HashMap();
+
+        hashTableOne.put("exist", "be");
+        hashTableOne.put("see", "view");
+        hashTableOne.put("right", "correct");
+//        hashTableOne.put("help", "assist");
+
+        HashMap hashTableTwo = new HashMap();
+
+        hashTableTwo.put("exist", "not to be");
+        hashTableTwo.put("see", "don't see");
+        hashTableTwo.put("right", "wrong");
+//        hashTableTwo.put("like", "dislike");
+
+        assertEquals("[[ exist, be, not to be ], [ see, view, don't see ], [ right, correct, wrong ]]", HashTable.leftJoin(hashTableOne, hashTableTwo).toString());
+    }
+
+    @Test
+    public void unmatchedKeysTest(){
+
+        HashMap hashTableOne = new HashMap();
+
+        hashTableOne.put("exist", "be");
+        hashTableOne.put("see", "view");
+        hashTableOne.put("right", "correct");
+        hashTableOne.put("help", "assist");
+
+        HashMap hashTableTwo = new HashMap();
+
+        hashTableTwo.put("exist", "not to be");
+        hashTableTwo.put("see", "don't see");
+        hashTableTwo.put("right", "wrong");
+        hashTableTwo.put("like", "dislike");
+
+        assertEquals("[[ exist, be, not to be ], [ help, assist, null ], [ see, view, don't see ], [ right, correct, wrong ]]", HashTable.leftJoin(hashTableOne, hashTableTwo).toString());
+    }
+//
+    @Test
+    public void testForEmptyTable(){
+//
+        HashMap hashTableOne = new HashMap();
+
+        hashTableOne.put("exist", "be");
+        hashTableOne.put("see", "view");
+        hashTableOne.put("right", "correct");
+        hashTableOne.put("help", "assist");
+
+        HashMap hashTableTwo = new HashMap();
+
+
+        assertEquals("[[ exist, be, null ], [ help, assist, null ], [ see, view, null ], [ right, correct, null ]]", HashTable.leftJoin(hashTableOne, hashTableTwo).toString());
+
+    }
+
+    @Test
+    public void testForEmptyTables(){
+
+        HashMap hashTableOne = new HashMap();
+        HashMap hashTableTwo = new HashMap();
+
+        assertNull(HashTable.leftJoin(hashTableOne, hashTableTwo));
+    }
 
 }
+
+
+
 

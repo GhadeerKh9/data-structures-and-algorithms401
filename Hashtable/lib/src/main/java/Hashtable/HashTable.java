@@ -180,7 +180,18 @@ public class HashTable<K,V> {
     }
 
 
+    public static List<String> leftJoin(HashMap<String, String> hashTableOne, HashMap<String, String> hashTableTwo) {
 
+        if (hashTableOne.keySet().isEmpty()) {
+            return null;
+        }
+        List<String> list = new ArrayList<>();
+        for (String node : hashTableOne.keySet()) {
+
+            list.add("[ " + node + ", " + hashTableOne.get(node) + ", " + hashTableTwo.get(node) + " ]");
+        }
+        return list;
+    }
 
 
     @Override
