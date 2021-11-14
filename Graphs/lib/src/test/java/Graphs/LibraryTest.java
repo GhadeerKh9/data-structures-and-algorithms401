@@ -73,4 +73,38 @@ class LibraryTest {
 
         assertEquals("[]", g.gettingNodes().toString());
     }
+
+
+    @Test
+    public void breadthFirst(){
+
+        Graph graph1 = new Graph();
+
+        graph1.addNode("Pandora");
+        graph1.addNode("Arendelle");
+        graph1.addNode("Metroville");
+        graph1.addNode("Monstroplolis");
+        graph1.addNode("Narnia");
+        graph1.addNode("Naboo");
+
+        graph1.addEdge("Pandora", "Arendelle");
+        graph1.addEdge("Arendelle", "Metroville");
+        graph1.addEdge("Arendelle", "Monstroplolis");
+        graph1.addEdge("Metroville", "Narnia");
+        graph1.addEdge("Metroville", "Naboo");
+        graph1.addEdge("Metroville", "Monstroplolis");
+        graph1.addEdge("Monstroplolis", "Naboo");
+        graph1.addEdge("Narnia", "Naboo");
+
+        assertEquals("[Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo]", graph1.breadthTraversal("Pandora").toString());
+    }
+
+    @Test
+    public void breadthFirstOneVertex(){
+
+        Graph graph1 = new Graph();
+
+        graph1.addNode("Pandora");
+        assertEquals("[Pandora]",graph1.breadthTraversal( "Pandora").toString());
+    }
 }
