@@ -28,13 +28,16 @@ Space: O(n)
 
 
 # Challenge Summary
-This challenge was to 
+This challenge was to write a function that accepts in a node and returns back vertices in the order of reaversing
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![Image](Whiteboard (3).png)
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+-write a method that takes in a node as an argument
+-  Declare a set and a queue
+- enqueue the root and and add it to the set as well
+- loop over the queue and declare a nd dequeue the front node
+- use a for loop to loop over the neighbours of the vertex, check if there's a node and add it to the set, and the queue
+- Return the set
 
-## Solution
-<!-- Show how to run your code, and examples of it in action -->
