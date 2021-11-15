@@ -31,7 +31,8 @@ Space: O(n)
 This challenge was to write a function that accepts in a node and returns back vertices in the order of reaversing
 
 ## Whiteboard Process
-!(Image)[Whiteboard (3).png]
+
+![image](Whiteboard (3).png)
 
 ## Approach & Efficiency
 -write a method that takes in a node as an argument
