@@ -46,4 +46,23 @@ public class Graph {
         }
         return print;
     }
+
+
+
+    Set<String> breadthTraversal(String root) {
+        Set<String> passed = new LinkedHashSet<>();
+        Queue<String> queue = new LinkedList<>();
+        queue.add(root);
+        passed.add(root);
+        while (!queue.isEmpty()) {
+            String vertex = queue.poll();
+            for (Vertex v : gettingNeighbours(vertex)) {
+                if (!passed.contains(v.label)) {
+                    passed.add(v.label);
+                    queue.add(v.label);
+                }
+            }
+        }
+        return passed;
+    }
 }
