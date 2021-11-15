@@ -32,7 +32,7 @@ This challenge was to write a function that accepts in a node and returns back v
 
 ## Whiteboard Process
 
-![image](Whiteboard (3).png)
+![image](Whiteboard.png)
 
 ## Approach & Efficiency
 -write a method that takes in a node as an argument
