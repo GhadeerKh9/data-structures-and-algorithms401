@@ -4,6 +4,10 @@
 package Graphs;
 
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryTest {
@@ -107,4 +111,154 @@ class LibraryTest {
         graph1.addNode("Pandora");
         assertEquals("[Pandora]",graph1.breadthTraversal( "Pandora").toString());
     }
+
+
+    @Test
+    public void testEmpty() {
+
+        Graph graph = new Graph();
+        List<String> path = new ArrayList<>();
+
+        assertEquals("null", graph.businessTrip(graph, path));
+    }
+
+    @Test
+    public void testOnlyListItem() {
+
+        Graph graph = new Graph();
+        List<String> path = new ArrayList<>();
+
+        graph.addNode("Pandora");
+        graph.addNode("Arendelle");
+        graph.addNode("Metroville");
+        graph.addNode("Monstroplolis");
+        graph.addNode("Narnia");
+        graph.addNode("Naboo");
+
+        graph.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        graph.addEdgeWithWeight("Pandora", "Metroville", 82);
+
+
+        graph.addEdgeWithWeight("Arendelle", "Metroville", 99);
+        graph.addEdgeWithWeight("Arendelle", "Monstroplolis", 42);
+
+        graph.addEdgeWithWeight("Metroville", "Monstroplolis", 105);
+        graph.addEdgeWithWeight("Metroville", "Narnia", 37);
+        graph.addEdgeWithWeight("Metroville", "Naboo", 26);
+
+        graph.addEdgeWithWeight("Monstroplolis", "Naboo", 73);
+        graph.addEdgeWithWeight("Narnia", "Naboo", 250);
+
+        path.add("Metroville");
+
+        assertEquals("null", graph.businessTrip(graph, path));
+
+    }
+
+    @Test
+    public void testDifferentPaths() {
+
+        Graph graph = new Graph();
+        List<String> path = new ArrayList<>();
+
+        graph.addNode("Pandora");
+        graph.addNode("Arendelle");
+        graph.addNode("Metroville");
+        graph.addNode("Monstroplolis");
+        graph.addNode("Narnia");
+        graph.addNode("Naboo");
+
+        graph.addEdgeWithWeight("Pandora", "Arendelle", 150);
+        graph.addEdgeWithWeight("Pandora", "Metroville", 82);
+
+
+        graph.addEdgeWithWeight("Arendelle", "Metroville", 99);
+        graph.addEdgeWithWeight("Arendelle", "Monstroplolis", 42);
+
+        graph.addEdgeWithWeight("Metroville", "Monstroplolis", 105);
+        graph.addEdgeWithWeight("Metroville", "Narnia", 37);
+        graph.addEdgeWithWeight("Metroville", "Naboo", 26);
+
+        graph.addEdgeWithWeight("Monstroplolis", "Naboo", 73);
+        graph.addEdgeWithWeight("Narnia", "Naboo", 250);
+
+        path.add("Metroville");
+        path.add("Pandora");
+
+        assertEquals("True, $82", graph.businessTrip(graph, path));
+
+        List<String> path1 = new ArrayList<>();
+        path1.add("Arendelle");
+        path1.add("Monstroplolis");
+        path1.add("Naboo");
+
+        assertEquals("True, $115", graph.businessTrip(graph, path1));
+
+        List<String> path2 = new ArrayList<>();
+        path2.add("Naboo");
+        path2.add("Pandora");
+
+        assertEquals("False, $0", graph.businessTrip(graph, path2));
+
+        List<String> path3 = new ArrayList<>();
+        path3.add("Narnia");
+        path3.add("Arendelle");
+        path3.add("Naboo");
+
+        assertEquals("False, $0", graph.businessTrip(graph, path3));
+    }
+
+
+    @Test
+    public void depthFirstTest(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+        graph.addNode("D");
+        graph.addNode("E");
+        graph.addNode("F");
+        graph.addNode("G");
+        graph.addNode("H");
+
+        graph.addEdge("A", "D");
+        graph.addEdge("A", "B");
+        graph.addEdge("B", "D");
+        graph.addEdge("B", "C");
+        graph.addEdge("C", "G");
+        graph.addEdge("D", "F");
+        graph.addEdge("D", "H");
+        graph.addEdge("D", "E");
+        graph.addEdge("F", "H");
+
+        assertEquals("[A, B, C, G, D, E, H, F]", graph.depthFirst("A").toString());
+    }
+
+    @Test
+    public void depthFirstOneVertex(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("A");
+
+        assertEquals("[A]", graph.depthFirst("A").toString());
+    }
+
+    @Test
+    public void depthFirstTest2(){
+
+        Graph graph = new Graph();
+
+        graph.addNode("A");
+        graph.addNode("B");
+        graph.addNode("C");
+
+        graph.addEdge("A", "B");
+
+        assertEquals("[A, B]", graph.depthFirst("A").toString());
+    }
+
+
 }

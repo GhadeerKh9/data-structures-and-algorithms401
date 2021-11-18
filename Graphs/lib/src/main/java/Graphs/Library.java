@@ -61,6 +61,65 @@ public class Library {
 
             System.out.println(graph1.breadthTraversal( "Pandora"));
 
+
+            Graph graph2 = new Graph();
+
+            graph2.addNode("Pandora");
+            graph2.addNode("Arendelle");
+            graph2.addNode("Metroville");
+            graph2.addNode("Monstropolis");
+            graph2.addNode("Narnia");
+            graph2.addNode("Naboo");
+
+            graph2.addEdgeWithWeight("Pandora", "Arendelle", 150);
+            graph2.addEdgeWithWeight("Pandora", "Metroville", 82);
+            graph2.addEdgeWithWeight("Arendelle", "Metroville",99);
+            graph2.addEdgeWithWeight("Arendelle", "Monstropolis",42);
+            graph2.addEdgeWithWeight("Metroville", "Narnia",37);
+            graph2.addEdgeWithWeight("Metroville", "Naboo",26);
+            graph2.addEdgeWithWeight("Metroville", "Monstropolis",105);
+            graph2.addEdgeWithWeight("Monstropolis", "Naboo",73);
+            graph2.addEdgeWithWeight("Narnia", "Naboo",250);
+
+            List<String> cities = new ArrayList<>();
+            cities.add("Pandora");
+            cities.add("Arendelle");
+            cities.add("Metroville");
+
+            List<String> cities1 = new ArrayList<>();
+            cities1.add("Pandora");
+            cities1.add("Naboo");
+            cities1.add("Metroville");
+
+
+            System.out.println("First Trip ---> " + graph2.businessTrip(graph2, cities));
+            System.out.println("Second Trip ---> " + graph2.businessTrip(graph2, cities1));
+
+            Graph graph3 = new Graph();
+
+            graph3.addNode("A");
+            graph3.addNode("B");
+            graph3.addNode("C");
+            graph3.addNode("D");
+            graph3.addNode("E");
+            graph3.addNode("F");
+            graph3.addNode("G");
+            graph3.addNode("H");
+
+
+            graph3.addEdge("A", "B");
+            graph3.addEdge("A", "D");
+            graph3.addEdge("B", "C");
+            graph3.addEdge("B", "D");
+            graph3.addEdge("C", "G");
+            graph3.addEdge("D", "E");
+            graph3.addEdge("D", "F");
+            graph3.addEdge("D", "H");
+            graph3.addEdge("F", "H");
+
+            System.out.println(graph3.depthFirst("A"));
+
+
         }
 
   
