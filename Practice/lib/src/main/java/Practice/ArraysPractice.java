@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
-public class Arrays {
+public class ArraysPractice {
 
     //    QUESTION 3 – LOGIC 2
     public static void countCharacters(String string) {
@@ -59,7 +59,7 @@ public class Arrays {
     }
 
 
-    //Intersection of Two Arrays II
+    //Intersection of Two ArraysPractice II
     public static ArrayList  arraysIntersection(int[] arr1, int[] arr2) {
 
         ArrayList newList = new ArrayList();
@@ -85,4 +85,28 @@ public class Arrays {
         }
         return newList;
     }
+
+
+    // move zeros
+    //  int [] arr3 = {1,0,3,0,0,4};
+
+    // ==> [1, 3, 3, 0, 4, 4]
+    public static int []  moveZeros(int[] arr) {
+
+        for(int i =0; i <arr.length-1; i++){
+
+            if(arr[i] ==0){
+                for(int j =i; j <arr.length-2; j++){
+
+
+                        arr[j] = arr[j+1];
+
+                }
+
+
+            }
+        }
+        return arr;
+    }
+
     }
