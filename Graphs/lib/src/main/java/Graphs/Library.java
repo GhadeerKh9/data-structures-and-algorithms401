@@ -120,6 +120,18 @@ public class Library {
             System.out.println(graph3.depthFirst("A"));
 
 
+
+
+
+                    graph2.isConnected("Pandora", "Naboo", graph2);
+                    graph2.isConnected("Pandora", "Naboo", graph2);
+
+
+
+
+            System.out.println(graph2.isConnected("Monstropolis", "BARBADOS", graph2));
+
+
         }
 
   
