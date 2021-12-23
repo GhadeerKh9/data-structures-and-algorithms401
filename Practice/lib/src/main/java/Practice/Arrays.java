@@ -1,6 +1,7 @@
 package Practice;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 
 public class Arrays {
@@ -56,4 +57,32 @@ public class Arrays {
         System.out.println(newList.toString());
 
     }
-}
+
+
+    //Intersection of Two Arrays II
+    public static ArrayList  arraysIntersection(int[] arr1, int[] arr2) {
+
+        ArrayList newList = new ArrayList();
+        Hashtable hashtable = new Hashtable();
+
+        for (int i = 0; i < arr1.length; i++) {
+
+
+            hashtable.put(arr1[i], 1);
+
+        }
+        for (int i = 0; i < arr2.length; i++) {
+
+
+            if (hashtable.containsKey(arr2[i])) {
+
+
+                newList.add(arr2[i]);
+
+            }
+
+
+        }
+        return newList;
+    }
+    }
