@@ -125,6 +125,65 @@ public class Graph {
 
         return string;
     }
+
+
+
+    boolean isConnected(String A, String B, Graph graph){
+
+        Set<String> visited = new LinkedHashSet();
+        Queue<String> queue = new LinkedList();
+        queue.add(A);
+        visited.add(A);
+
+        while(!queue.isEmpty()  ) {
+            String vertex = (String)queue.poll();
+            Iterator var6 = graph.getAdjVertices(vertex).iterator();
+
+            while(var6.hasNext()) {
+                Vertex v = (Vertex)var6.next();
+                if (!visited.contains(v.label)) {
+                    visited.add(v.label);
+                    queue.add(v.label);
+                }
+                if (visited.contains(B)){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+
+    }
+
+    private List<Vertex> getAdjVertices(String data) {
+        return (List)this.adjacencyVertices.get(new Vertex(data));
+    }
+
+//    boolean isAnagrams (String str1, String str2){
+//
+//        char[]str1Array = str1.replaceAll("\\s","" ).toLowerCase().toCharArray();
+//        char[]str2Array = str2.replaceAll("\\s","" ).toLowerCase().toCharArray();
+//
+//        if (str1Array.length != str2Array.length){
+//            return false;
+//        }
+//
+//        HashMap<Character, Integer> hashMap1 = new HashMap<>();
+//
+//
+//        HashMap<Character, Integer> hashMap2 = new HashMap<>();
+//
+//        int i;
+//        for (i = 0; i < str1.length(); i++){
+//            hashMap1.put(str1Array[1], 0);
+//            hashMap2.put(str2Array[1], 0);
+//
+//        }
+//
+//        return hashMap1.equals(hashMap2);
+//
+//
+//    }
 }
 
 
