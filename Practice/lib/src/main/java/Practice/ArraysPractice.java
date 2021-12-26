@@ -60,7 +60,7 @@ public class ArraysPractice {
 
 
     //Intersection of Two ArraysPractice II
-    public static ArrayList  arraysIntersection(int[] arr1, int[] arr2) {
+    public static ArrayList arraysIntersection(int[] arr1, int[] arr2) {
 
         ArrayList newList = new ArrayList();
         Hashtable hashtable = new Hashtable();
@@ -91,15 +91,15 @@ public class ArraysPractice {
     //  int [] arr3 = {1,0,3,0,0,4};
 
     // ==> [1, 3, 3, 0, 4, 4]
-    public static int []  moveZeros(int[] arr) {
+    public static int[] moveZeros(int[] arr) {
 
-        for(int i =0; i <arr.length-1; i++){
+        for (int i = 0; i < arr.length - 1; i++) {
 
-            if(arr[i] ==0){
-                for(int j =i; j <arr.length-2; j++){
+            if (arr[i] == 0) {
+                for (int j = i; j < arr.length - 2; j++) {
 
 
-                        arr[j] = arr[j+1];
+                    arr[j] = arr[j + 1];
 
                 }
 
@@ -109,4 +109,29 @@ public class ArraysPractice {
         return arr;
     }
 
+    //missingNumber
+    // [0,1] , output ==> 2
+    public static int missingNumber(int[] arr) {
+
+        int num = -1;
+        int max = arr[0];
+//        int min = arr[0];
+
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+
+            }
+
+            for (int j = 0; j < max; j++) {
+                if (arr[j] != j) {
+                    num = j;
+                }
+
+            }
+
+        }
+        return num;
     }
+}

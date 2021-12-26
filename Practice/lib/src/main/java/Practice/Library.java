@@ -11,17 +11,17 @@ public class Library {
 //        String [] arr = {"Apple", "Banana", "Cucumber", "Watermelon", "Ice-cream", "Orange", "Eggplant", "Egg"};
 //        ArraysPractice.printCustomization(arr);
 //        ArraysPractice.printNamesLongerThanFive(arr);
+//
 
-        int [] arr1 = {2,3,4};
-        int [] arr2 = {1,3,4};
-
-
-        int [] arr3 = {1,0,2,0,3, 4, 0, 0, 5,6,7};
-
-
+//        int [] arr1 = {2,3,4};
+//        int [] arr2 = {1,3,4};
 //        System.out.println(ArraysPractice.arraysIntersection(arr1, arr2));
 
-        System.out.println(Arrays.toString(ArraysPractice.moveZeros(arr3)));
+//          int [] arr3 = {1,0,2,0,3, 4, 0, 0, 5,6,7};
+//          System.out.println(Arrays.toString(ArraysPractice.moveZeros(arr3)));
+
+        int [] arr4 = {0,1,2,4};
+        System.out.println(ArraysPractice.missingNumber(arr4));
 
 
 
