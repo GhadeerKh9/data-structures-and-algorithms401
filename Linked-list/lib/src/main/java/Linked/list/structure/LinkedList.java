@@ -187,6 +187,46 @@ public class LinkedList {
     }
 
 
+    ////////////////////////////////////////////////
+
+    public LinkedList reverseListMosh(LinkedList list){
+
+      LinkedListNode current = head.getNext();
+      LinkedListNode previous = head;
+
+
+        LinkedListNode n;
+    while (current != null){
+        n = current.getNext();
+        current.setNext(previous);
+        previous = current;
+        current = n;
+    }
+
+
+    list.head = previous;
+
+
+
+   return list;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ///////////////////////////////////////////////////////////
+
+
     @Override
     public String toString() {
         String printing = "";
