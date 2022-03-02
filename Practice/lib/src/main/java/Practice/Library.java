@@ -37,7 +37,7 @@ public class Library {
 //
 //        System.out.println(ArraysPractice.charactersCount("Ghadeeerrkkkkt"));
         int [] sumArr = {1, 3, 7, 2, 5, 10,2,3};
-        System.out.println(ArraysPractice.sumEven(sumArr));
+        System.out.println(ArraysPractice.sumOdd(sumArr));
 
 
 
