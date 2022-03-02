@@ -302,7 +302,7 @@ public class ArraysPractice {
     };
 
 
-   public static int sumOdd (int [] arr){
+   public static int sumOfOddNumbers(int [] arr){
        int sum =0;
        for(int i =0; i < arr.length; i++){
            if(arr[i] % 2 != 0){
@@ -312,5 +312,13 @@ public class ArraysPractice {
 
        return sum;
    }
+
+
+   /// arr = [1,3,4,7] ==> [2,5,6]
+    public static ArrayList<Integer> returnMissingInteger(int [] arr){
+
+
+    };
+
 
 }
