@@ -280,4 +280,37 @@ public class ArraysPractice {
     };
 
 
+    /// Find the count of each character in a string without using any built-in methods.
+
+    public static HashMap charactersCount (String string){
+
+        int counter = 0;
+        HashMap hashmap = new HashMap();
+
+
+        for(int i = 0; i < string.length()-1; i++){
+            if (hashmap.get(string.charAt(i)) != null){
+                hashmap.put(string.charAt(i), hashmap.get(string.charAt(i)+1));
+            }else{
+                hashmap.put(string.charAt(i), 1);
+            };
+        };
+
+
+
+      return hashmap;
+    };
+
+
+   public static int sumEven (int [] arr){
+       int sum =0;
+       for(int i =0; i < arr.length; i++){
+           if(arr[i] % 2 != 0){
+               sum = sum + arr[i];
+           }
+       }
+
+       return sum;
+   }
+
 }
