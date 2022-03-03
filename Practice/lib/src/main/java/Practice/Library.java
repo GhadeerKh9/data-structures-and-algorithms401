@@ -36,8 +36,8 @@ public class Library {
 
 //
 //        System.out.println(ArraysPractice.charactersCount("Ghadeeerrkkkkt"));
-        int [] sumArr = {1, 3, 7, 2, 5, 10,2,3};
-        System.out.println(ArraysPractice.sumOfOddNumbers(sumArr));
+//        int [] sumArr = {1, 3, 7, 2, 5, 10,2,3};
+//        System.out.println(ArraysPractice.sumOfOddNumbers(sumArr));
 
 
 
@@ -52,6 +52,13 @@ public class Library {
 
 //        System.out.println(Arrays.toString(ArraysPractice.moveZeros(arr)));
 //        System.out.println(ArraysPractice.searchInsert(arr, k));
+
+
+        int [] arr2 = {1,2,4,7,8};
+        System.out.println(ArraysPractice.returnMissingInteger(arr2));
+        System.out.println(ArraysPractice.returnMissingInteger2(arr2));
+
+
 
     }
 }

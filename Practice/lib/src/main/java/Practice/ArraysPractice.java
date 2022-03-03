@@ -317,8 +317,36 @@ public class ArraysPractice {
    /// arr = [1,3,4,7] ==> [2,5,6]
     public static ArrayList<Integer> returnMissingInteger(int [] arr){
 
+       ArrayList<Integer> list = new ArrayList();
+       int item = arr[0];
 
+
+       for(int i =0; i <arr.length-1; i++){
+           if(item + 1 != arr[i + 1]){
+               list.add(item +1);
+               i--;
+           }
+           item++;
+       }
+     return list;
     };
+
+    public static ArrayList<Integer> returnMissingInteger2(int[] input) {
+        int min = input[0];
+        int max = input[input.length - 1];
+        ArrayList<Integer> list = new ArrayList();
+        int index = 0;
+
+        while (min < max) {
+            if (min + 1 != input[index + 1]) {
+                list.add(min + 1);
+                index--;
+            }
+            index++;
+            min++;
+        }
+        return list;
+    }
 
 
 }
